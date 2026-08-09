@@ -1,0 +1,214 @@
+{
+  "main": {
+    "id": "8b44a23e5fa669bd",
+    "type": "split",
+    "children": [
+      {
+        "id": "db72057cbf881264",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7d8df2293f15da6b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README.md"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "820b55906afe3fb6",
+    "type": "split",
+    "children": [
+      {
+        "id": "8dd6852519f66772",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "29b5d599c9c7769d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "b8be78021dc9c691",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "6e51fbaffb836f91",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 400.5
+  },
+  "right": {
+    "id": "935371e6798e9746",
+    "type": "split",
+    "children": [
+      {
+        "id": "44102249beac458f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5abff604f1f29eeb",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "# HTB — Reactor.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes"
+            }
+          },
+          {
+            "id": "19eac6f91c232029",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "# HTB — Reactor.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes"
+            }
+          },
+          {
+            "id": "92c52c344b34ffac",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "89e108b64bdba3e7",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "65f9904490782268",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "# HTB — Reactor.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false
+    }
+  },
+  "active": "7d8df2293f15da6b",
+  "lastOpenFiles": [
+    "HTB/Reactor.md",
+    "HTB/TwoMillion.md",
+    "Certficados/Reactor.png",
+    "Certficados/TwoMillion.png",
+    "Images/certifiacion.png",
+    "Sin título.md",
+    "Certficados",
+    "HTB",
+    "README.md.md",
+    "Images/correo.png",
+    "Images/Pasted image 20260809000939.png",
+    "Images/acceso root.png",
+    "Pasted image 20260808225406.png.md",
+    "Images/api encode en base 64.png",
+    "Images/añadiendo la maquina a hosts.png",
+    "Images/appi2.png",
+    "Images/appi 1.png",
+    "Images",
+    "Node.js Inspector - CDP.md",
+    "CVE-2025-55182.md"
+  ]
+}
