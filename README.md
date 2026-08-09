@@ -23,8 +23,8 @@ No es una carrera por el número. Es una carrera contra la excusa de "hoy no ten
 
 |#|Máquina|OS|Dificultad|Vector inicial|Privesc|Fecha|
 |---|---|---|---|---|---|---|
-|1|[Reactor](https://claude.ai/chat/HTB/Reactor.md)|Linux|Easy|CVE-2025-55182 (Next.js RCE no autenticado)|Node.js Inspector / CDP mal configurado|08 Aug 2026|
-|2|[TwoMillion](https://claude.ai/chat/HTB/TwoMillion.md)|Linux|Easy|Mass Assignment / Command Injection en API|CVE-2023-0386 (OverlayFS)|09 Aug 2026|
+|1|[Reactor](HTB/Reactor.md)|Linux|Easy|CVE-2025-55182 (Next.js RCE no autenticado)|Node.js Inspector / CDP mal configurado|08 Aug 2026|
+|2|[TwoMillion](HTB/TwoMillion.md)|Linux|Easy|Mass Assignment / Command Injection en API|CVE-2023-0386 (OverlayFS)|09 Aug 2026|
 
 Se irá actualizando esta tabla con cada máquina resuelta, en el orden en que caen.
 
