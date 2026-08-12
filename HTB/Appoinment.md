@@ -33,7 +33,7 @@ ping 10.129.254.11 -c 4
 
 **Resultado:** `0% packet loss` → la máquina está activa y responde.
 
-![Pasted image 20260811201210](../Images/Pasted image 20260811201210.png)
+![Pasted image 20260811200918](../Images/Pasted image 20260811200918.png)
 
 ### 2.2 Añadir la máquina a `/etc/hosts`
 
@@ -45,7 +45,7 @@ sudo vim /etc/hosts
 10.129.254.11    appointment
 ```
 
-![Pasted image 20260811200918](../Images/Pasted image 20260811200918.png)
+![Pasted image 20260811201210](../Images/Pasted image 20260811201210.png)
 
 ### 2.3 Escaneo de puertos
 
@@ -240,3 +240,5 @@ Bypass de autenticación
 ```
 
 > [!success] Resultado **Flag:** capturada ✅ **Vector:** SQL Injection — bypass de autenticación con comentario MySQL (`#`) **Servicio crítico:** Apache HTTP en puerto 80 **Remediación clave:** consultas preparadas
+
+![Appoinment](../Certficados/Appoinment.png)
