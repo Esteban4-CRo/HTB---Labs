@@ -12,10 +12,10 @@ No es una carrera por el número. Es una carrera contra la excusa de "hoy no ten
 
 |Métrica|Valor|
 |---|---|
-|Día actual|2|
-|Máquinas resueltas|2|
-|Racha actual|2 días|
-|Última actualización|09 Aug 2026|
+|Día actual|3|
+|Máquinas resueltas|3|
+|Racha actual|3 días|
+|Última actualización|11 Aug 2026|
 
 ---
 
@@ -23,8 +23,9 @@ No es una carrera por el número. Es una carrera contra la excusa de "hoy no ten
 
 |#|Máquina|OS|Dificultad|Vector inicial|Privesc|Fecha|
 |---|---|---|---|---|---|---|
-|1|[Reactor](https://claude.ai/chat/HTB/Reactor.md)|Linux|Easy|CVE-2025-55182 (Next.js RCE no autenticado)|Node.js Inspector / CDP mal configurado|08 Aug 2026|
-|2|[TwoMillion](https://claude.ai/chat/HTB/TwoMillion.md)|Linux|Easy|Mass Assignment / Command Injection en API|CVE-2023-0386 (OverlayFS)|09 Aug 2026|
+|1|[Reactor](HTB/Reactor.md)|Linux|Easy|CVE-2025-55182 (Next.js RCE no autenticado)|Node.js Inspector / CDP mal configurado|08 Aug 2026|
+|2|[TwoMillion](HTB/TwoMillion.md)|Linux|Easy|Mass Assignment / Command Injection en API|CVE-2023-0386 (OverlayFS)|09 Aug 2026|
+|3|[Appointment](HTB/Appoinment.md)|Linux|Very Easy|SQL Injection — bypass de autenticación|N/A (acceso directo a flag)|11 Aug 2026|
 
 Se irá actualizando esta tabla con cada máquina resuelta, en el orden en que caen.
 
