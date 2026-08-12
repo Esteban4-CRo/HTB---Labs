@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md.md",
+                "file": "HTB/Appoinment.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README.md"
+              "title": "Appoinment"
             }
           }
         ]
@@ -190,7 +190,14 @@
   },
   "active": "7d8df2293f15da6b",
   "lastOpenFiles": [
+    "Images/Pasted image 20260811204159.png",
+    "Images/Pasted image 20260811204145.png",
+    "Images/Pasted image 20260811203818.png",
+    "Images/Pasted image 20260811202226.png",
+    "Images/Pasted image 20260811201210.png",
+    "Images/Pasted image 20260811200918.png",
     "HTB/Reactor.md",
+    "HTB/Appoinment.md",
     "HTB/TwoMillion.md",
     "Certficados/Reactor.png",
     "Certficados/TwoMillion.png",
@@ -201,12 +208,7 @@
     "README.md.md",
     "Images/correo.png",
     "Images/Pasted image 20260809000939.png",
-    "Images/acceso root.png",
     "Pasted image 20260808225406.png.md",
-    "Images/api encode en base 64.png",
-    "Images/añadiendo la maquina a hosts.png",
-    "Images/appi2.png",
-    "Images/appi 1.png",
     "Images",
     "Node.js Inspector - CDP.md",
     "CVE-2025-55182.md"
