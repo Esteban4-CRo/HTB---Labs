@@ -33,7 +33,7 @@ ping 10.129.254.11 -c 4
 
 **Resultado:** `0% packet loss` → la máquina está activa y responde.
 
-![Pasted image 20260811200918](../Images/Pasted image 20260811200918.png)
+![Pasted image 20260811200918](../Images/Pasted_image_20260811200918.png)
 
 ### 2.2 Añadir la máquina a `/etc/hosts`
 
@@ -45,7 +45,7 @@ sudo vim /etc/hosts
 10.129.254.11    appointment
 ```
 
-![Pasted image 20260811201210](../Images/Pasted image 20260811201210.png)
+![Pasted image 20260811201210](../Images/Pasted_image_20260811201210.png)
 
 ### 2.3 Escaneo de puertos
 
@@ -59,7 +59,7 @@ nmap -p- -sV --min-rate 5000 10.129.254.11
 | `-sV` | Detección de versiones — identifica el servicio exacto y su versión |
 | `--min-rate 5000` | Fuerza un mínimo de **5 000 paquetes/segundo** para acelerar el escaneo |
 
-![Pasted image 20260811202226](../Images/Pasted image 20260811202226.png)
+![Pasted image 20260811202226](../Images/Pasted_image_20260811202226.png)
 
 **Resultado relevante:**
 
@@ -82,7 +82,7 @@ Al visitar `http://10.129.254.11` se muestra un formulario de login estándar. N
 gobuster dir -u http://10.129.254.11 -w /usr/share/wordlists/dirb/common.txt
 ```
 
-![Pasted image 20260811203818](../Images/Pasted image 20260811203818.png)
+![Pasted image 20260811203818](../Images/Pasted_image_20260811203818.png)
 
 > [!tip] El switch `dir` en Gobuster indica búsqueda de **directorios**, no de subdominios (que sería `dns`). En terminología de aplicaciones web, una carpeta o directorio equivale a lo que Gobuster llama un *directory*.
 
@@ -149,8 +149,8 @@ SELECT * FROM users WHERE username='admin'
 
 > [!success] Bypass de autenticación El servidor devuelve sesión válida como `admin` sin necesidad de conocer la contraseña.
 
-![Pasted image 20260811204145](../Images/Pasted image 20260811204145.png)
-![Pasted image 20260811204159](../Images/Pasted image 20260811204159.png)
+![Pasted image 20260811204145](../Images/Pasted_image_20260811204145.png)
+![Pasted image 20260811204159](../Images/Pasted_image_20260811204159.png)
 
 ---
 

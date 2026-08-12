@@ -46,7 +46,7 @@ sudo vim /etc/hosts
 10.129.229.66    2million.htb
 ```
 
-![añadiendo la maquina a hosts](../Images/añadiendo la maquina a hosts.png)
+![añadiendo la maquina a hosts](../Images/añadiendo_la_maquina_a_hosts.png)
 
 > Antes de este paso, el navegador no podía resolver `2million.htb` ("Hmm. We're having trouble finding that site").
 
@@ -140,7 +140,7 @@ echo 'UEYxQlgtMENGTkktSUtOOVAtVzZNR1Q=' | base64 -d
 PF1BX-0CFNI-IKN9P-W6MGT
 ```
 
-![api encode en base 64](../Images/api encode en base 64.png)
+![api encode en base 64](../Images/api_encode_en_base_64.png)
 > [!success] Invite code obtenido `PF1BX-0CFNI-IKN9P-W6MGT` — listo para usarse en el formulario de registro.
 
 ---
@@ -168,7 +168,7 @@ Host: 2million.htb
 Cookie: PHPSESSID=...
 ```
 
-![appi 1](../Images/appi 1.png)
+![appi 1](../Images/appi_1.png)
 
 Esta petición se envía a **Repeater** para seguir trabajando sobre ella.
 
@@ -240,7 +240,7 @@ Content-Length: 0
 }
 ```
 
-![Captura de pantalla 2026-08-08 221759](../Images/Captura de pantalla 2026-08-08 221759.png)
+![Captura de pantalla 2026-08-08 221759](../Images/Captura_de_pantalla_2026-08-08_221759.png)
 
 El mensaje de error revela el nombre exacto del parámetro que falta. Se añade `email` y, además, se agrega **`is_admin: 1`** — un parámetro no documentado pero razonable de probar (mass assignment):
 
@@ -261,7 +261,7 @@ El mensaje de error revela el nombre exacto del parámetro que falta. Se añade 
 }
 ```
 
-![Pasted image 20260808222413](../Images/Pasted image 20260808222413.png)
+![Pasted image 20260808222413](../Images/Pasted_image_20260808222413.png)
 
 > [!success] Admin obtenido El endpoint no valida que el usuario autenticado tenga permisos para modificar `is_admin`. La API confía ciegamente en los campos enviados por el cliente → **mass assignment / privilege escalation horizontal**.
 
@@ -296,7 +296,7 @@ remote edge-eu-free-1.2million.htb 1337
 ...
 ```
 
-![Pasted image 20260808223600](../Images/Pasted image 20260808223600.png)
+![Pasted image 20260808223600](../Images/Pasted_image_20260808223600.png)
 
 ### 8.2 Inyección de comandos
 
@@ -314,7 +314,7 @@ El parámetro `username` se concatena sin sanitizar en un comando del sistema. S
 uid=33(www-data) gid=33(www-data) groups=33(www-data)
 ```
 
-![Pasted image 20260808223908](../Images/Pasted image 20260808223908.png)
+![Pasted image 20260808223908](../Images/Pasted_image_20260808223908.png)
 
 > [!success] Command Injection confirmada El backend ejecuta el `username` dentro de una llamada de sistema (probablemente para generar el certificado con OpenSSL/`easy-rsa`). Se obtiene **RCE como `www-data`**.
 
@@ -344,7 +344,7 @@ js
 views
 ```
 
-![Pasted image 20260808224012](../Images/Pasted image 20260808224012.png)
+![Pasted image 20260808224012](../Images/Pasted_image_20260808224012.png)
 
 ### 9.2 Buscar archivos ocultos
 
@@ -362,7 +362,7 @@ drwxr-xr-x  5 root root 4096 Aug  9 03:40 VPN
 ...
 ```
 
-![Pasted image 20260808224258](../Images/Pasted image 20260808224258.png)
+![Pasted image 20260808224258](../Images/Pasted_image_20260808224258.png)
 
 > [!important] `.env` descubierto Al listar con `-la` aparece un `.env` de 87 bytes — candidato inmediato a contener credenciales (típico en apps PHP con configuración vía variables de entorno).
 
@@ -388,7 +388,7 @@ admin@2million:~$ cat user.txt
 85289a238912c316c40d4637d651a5d5
 ```
 
-![Pasted image 20260808224818](../Images/Pasted image 20260808224818.png)
+![Pasted image 20260808224818](../Images/Pasted_image_20260808224818.png)
 
 > [!success] User Flag capturada ✅
 
@@ -467,7 +467,7 @@ id
 uid=0(root) gid=0(root) groups=0(root),1000(admin)
 ```
 
-![Pasted image 20260809000939](../Images/Pasted image 20260809000939.png)
+![Pasted image 20260809000939](../Images/Pasted_image_20260809000939.png)
 
 ### 12.4 Captura de la root flag
 
