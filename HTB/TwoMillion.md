@@ -46,7 +46,7 @@ sudo vim /etc/hosts
 10.129.229.66    2million.htb
 ```
 
-![añadiendo la maquina a hosts](../Images/añadiendo_la_maquina_a_hosts.png)
+![añadiendo la maquina a hosts](../Images/anadiendo_la_maquina_a_hosts.png)
 
 > Antes de este paso, el navegador no podía resolver `2million.htb` ("Hmm. We're having trouble finding that site").
 
