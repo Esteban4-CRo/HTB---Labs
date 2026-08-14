@@ -12,10 +12,10 @@ No es una carrera por el número. Es una carrera contra la excusa de "hoy no ten
 
 |Métrica|Valor|
 |---|---|
-|Día actual|3|
-|Máquinas resueltas|3|
-|Racha actual|3 días|
-|Última actualización|11 Aug 2026|
+|Día actual|4|
+|Máquinas resueltas|4|
+|Racha actual|4 días|
+|Última actualización|14 Aug 2026|
 
 ---
 
@@ -26,6 +26,7 @@ No es una carrera por el número. Es una carrera contra la excusa de "hoy no ten
 |1|[Reactor](HTB/Reactor.md)|Linux|Easy|CVE-2025-55182 (Next.js RCE no autenticado)|Node.js Inspector / CDP mal configurado|08 Aug 2026|
 |2|[TwoMillion](HTB/TwoMillion.md)|Linux|Easy|Mass Assignment / Command Injection en API|CVE-2023-0386 (OverlayFS)|09 Aug 2026|
 |3|[Appointment](HTB/Appoinment.md)|Linux|Very Easy|SQL Injection — bypass de autenticación|N/A (acceso directo a flag)|11 Aug 2026|
+|4|[Fireflow](HTB/Fireflow.md)|Linux|Medium Easy|CVE-2026-33017 (Langflow RCE)|JWT Bypass (`alg: none`) + Kubelet API Exec (WebSockets)|13 Aug 2026|
 
 Se irá actualizando esta tabla con cada máquina resuelta, en el orden en que caen.
 
@@ -37,7 +38,7 @@ Se irá actualizando esta tabla con cada máquina resuelta, en el orden en que c
 .
 ├── HTB/          # Writeups en Markdown, uno por máquina
 ├── Images/       # Capturas de pantalla usadas en los writeups
-├── Certificados/ # Captturas de constancia completada maquina
+├── Certficados/  # Capturas de constancia completada máquina
 └── README.md     # Este archivo
 ```
 
@@ -65,7 +66,7 @@ Cada writeup sigue, en la medida de lo posible, la misma estructura:
 - Burp Suite
 - curl / jq
 - Python (PoCs y scripts de explotación)
-- Node.js (cuando el objetivo lo requiere)
+- Node.js / WebSockets (cuando el objetivo lo requiere)
 - SSH
 
 ---
