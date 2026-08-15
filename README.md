@@ -12,10 +12,10 @@ No es una carrera por el número. Es una carrera contra la excusa de "hoy no ten
 
 |Métrica|Valor|
 |---|---|
-|Día actual|4|
-|Máquinas resueltas|4|
-|Racha actual|4 días|
-|Última actualización|14 Aug 2026|
+|Día actual|5|
+|Máquinas resueltas|5|
+|Racha actual|5 días|
+|Última actualización|15 Aug 2026|
 
 ---
 
@@ -27,6 +27,7 @@ No es una carrera por el número. Es una carrera contra la excusa de "hoy no ten
 |2|[TwoMillion](HTB/TwoMillion.md)|Linux|Easy|Mass Assignment / Command Injection en API|CVE-2023-0386 (OverlayFS)|09 Aug 2026|
 |3|[Appointment](HTB/Appoinment.md)|Linux|Very Easy|SQL Injection — bypass de autenticación|N/A (acceso directo a flag)|11 Aug 2026|
 |4|[Fireflow](HTB/Fireflow.md)|Linux|Medium Easy|CVE-2026-33017 (Langflow RCE)|JWT Bypass (`alg: none`) + Kubelet API Exec (WebSockets)|13 Aug 2026|
+|5|[Sequel](HTB/Sequel.md)|Linux|Very Easy|Acceso MariaDB sin contraseña (`root@3306`)|N/A (acceso directo a flag)|15 Aug 2026|
 
 Se irá actualizando esta tabla con cada máquina resuelta, en el orden en que caen.
 
