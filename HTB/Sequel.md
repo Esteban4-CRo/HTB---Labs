@@ -29,13 +29,13 @@ flowchart TD
 
 Empezamos agregando la dirección IP a nuestro `/etc/hosts`:
 
-![Pasted image 20260814232839](../Images/Pasted_image_20260814232839.png)
+![Pasted image 20260814232839](../Images/Pasted%20image%2020260814232839.png)
 
 ### 2.2 Comprobar conectividad
 
 Comprobamos conectividad con el comando `ping`:
 
-![Pasted image 20260814233357](../Images/Pasted_image_20260814233357.png)
+![Pasted image 20260814233357](../Images/Pasted%20image%2020260814233357.png)
 
 ### 2.3 Escaneo de puertos con Nmap
 
@@ -53,7 +53,7 @@ sudo nmap -sCV --min-rate 5000 10.129.9.216 -oN SequelScan
 | `--min-rate 5000` | Envía al menos 5000 paquetes por segundo (escaneo rápido) |
 | `-oN SequelScan` | Guarda la salida en formato normal en `SequelScan` |
 
-![Pasted image 20260814234022](../Images/Pasted_image_20260814234022.png)
+![Pasted image 20260814234022](../Images/Pasted%20image%2020260814234022.png)
 
 > **Resultado del escaneo:** El puerto **3306/tcp** se encuentra abierto corriendo MariaDB.
 
@@ -65,7 +65,7 @@ sudo nmap -sCV --min-rate 5000 10.129.9.216 -oN SequelScan
 
 Instalamos el cliente `mysql` (o `mariadb-client`) para poder comunicarnos con la base de datos objetivo:
 
-![Pasted image 20260814234314](../Images/Pasted_image_20260814234314.png)
+![Pasted image 20260814234314](../Images/Pasted%20image%2020260814234314.png)
 
 Para especificar el usuario al iniciar sesión en la línea de comandos de MySQL usamos el switch `-u`:
 
@@ -75,7 +75,7 @@ mysql -h 10.129.9.216 -u root
 
 Intentamos conectar con el usuario `root` sin proporcionar contraseña.
 
-![Pasted image 20260814234909](../Images/Pasted_image_20260814234909.png)
+![Pasted image 20260814234909](../Images/Pasted%20image%2020260814234909.png)
 
 > [!success] Acceso concedido
 > Nos conectamos exitosamente a la instancia MariaDB como `root` sin contraseña.
@@ -88,7 +88,7 @@ Intentamos conectar con el usuario `root` sin proporcionar contraseña.
 
 Al ejecutar `SHOW DATABASES;`, observamos las bases de datos comunes (`information_schema`, `mysql`, `performance_schema`) y una cuarta base de datos única propia del objetivo: **`htb`**.
 
-![Pasted image 20260814235344](../Images/Pasted_image_20260814235344.png)
+![Pasted image 20260814235344](../Images/Pasted%20image%2020260814235344.png)
 
 ### 4.2 Seleccionar la base de datos `htb`
 
@@ -98,7 +98,7 @@ Para seleccionar y trabajar sobre la base de datos `htb`, usamos el comando `USE
 USE htb;
 ```
 
-![Pasted image 20260814235416](../Images/Pasted_image_20260814235416.png)
+![Pasted image 20260814235416](../Images/Pasted%20image%2020260814235416.png)
 
 ### 4.3 Consultar Tablas y Columnas
 
@@ -108,7 +108,7 @@ Listamos las tablas con `SHOW TABLES;` y describimos las columnas de la tabla `c
 DESCRIBE config;
 ```
 
-![Pasted image 20260814235559](../Images/Pasted_image_20260814235559.png)
+![Pasted image 20260814235559](../Images/Pasted%20image%2020260814235559.png)
 
 Confirmamos que la tabla `config` contiene una columna llamada `name` y otra `value` (o la columna `flag`).
 
@@ -120,10 +120,10 @@ Para consultar todo el contenido de la tabla `config` usamos el carácter comod�
 SELECT * FROM config;
 ```
 
-![Pasted image 20260814235752](../Images/Pasted_image_20260814235752.png)
+![Pasted image 20260814235752](../Images/Pasted%20image%2020260814235752.png)
 
-![Pasted image 20260814235103](../Images/Pasted_image_20260814235103.png)
-![Pasted image 20260814235313](../Images/Pasted_image_20260814235313.png)
+![Pasted image 20260814235103](../Images/Pasted%20image%2020260814235103.png)
+![Pasted image 20260814235313](../Images/Pasted%20image%2020260814235313.png)
 
 > [!success] Flag obtenida
 > La flag se encuentra almacenada dentro de la tabla `config`. ✅
