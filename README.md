@@ -10,24 +10,25 @@ No es una carrera por el número. Es una carrera contra la excusa de "hoy no ten
 
 ## Estado del reto
 
-|Métrica|Valor|
-|---|---|
-|Día actual|5|
-|Máquinas resueltas|5|
-|Racha actual|5 días|
-|Última actualización|15 Aug 2026|
+| Métrica | Valor |
+|---------|-------|
+| Día actual | 6 |
+| Máquinas resueltas | 6 |
+| Racha actual | 6 días |
+| Última actualización | 20 Aug 2026 |
 
 ---
 
 ## Progreso
 
-|#|Máquina|OS|Dificultad|Vector inicial|Privesc|Fecha|
-|---|---|---|---|---|---|---|
-|1|[Reactor](HTB/Reactor.md)|Linux|Easy|CVE-2025-55182 (Next.js RCE no autenticado)|Node.js Inspector / CDP mal configurado|08 Aug 2026|
-|2|[TwoMillion](HTB/TwoMillion.md)|Linux|Easy|Mass Assignment / Command Injection en API|CVE-2023-0386 (OverlayFS)|09 Aug 2026|
-|3|[Appointment](HTB/Appoinment.md)|Linux|Very Easy|SQL Injection — bypass de autenticación|N/A (acceso directo a flag)|11 Aug 2026|
-|4|[Fireflow](HTB/Fireflow.md)|Linux|Medium Easy|CVE-2026-33017 (Langflow RCE)|JWT Bypass (`alg: none`) + Kubelet API Exec (WebSockets)|13 Aug 2026|
-|5|[Sequel](HTB/Sequel.md)|Linux|Very Easy|Acceso MariaDB sin contraseña (`root@3306`)|N/A (acceso directo a flag)|15 Aug 2026|
+| # | Máquina | OS | Dificultad | Vector inicial | Privesc | Fecha |
+|---|---------|-----|-----------|----------------|---------|-------|
+| 1 | [Reactor](HTB/Reactor.md) | Linux | Easy | CVE-2025-55182 (Next.js RCE no autenticado) | Node.js Inspector / CDP mal configurado | 08 Aug 2026 |
+| 2 | [TwoMillion](HTB/TwoMillion.md) | Linux | Easy | Mass Assignment / Command Injection en API | CVE-2023-0386 (OverlayFS) | 09 Aug 2026 |
+| 3 | [Appointment](HTB/Appoinment.md) | Linux | Very Easy | SQL Injection — bypass de autenticación | N/A (acceso directo a flag) | 11 Aug 2026 |
+| 4 | [Fireflow](HTB/Fireflow.md) | Linux | Medium Easy | CVE-2026-33017 (Langflow RCE) | JWT Bypass (`alg: none`) + Kubelet API Exec (WebSockets) | 13 Aug 2026 |
+| 5 | [Sequel](HTB/Sequel.md) | Linux | Very Easy | Acceso MariaDB sin contraseña (`root@3306`) | N/A (acceso directo a flag) | 15 Aug 2026 |
+| 6 | [Odyssey](HTB/Odyssey.md) | Windows | Easy | NoSQL Pipeline Injection + WebAuthn Synthetic Registration | CVE-2025-1302 → GodPotato → dMSA Ouroboros → YAML Deser → DCSync | 20 Aug 2026 |
 
 Se irá actualizando esta tabla con cada máquina resuelta, en el orden en que caen.
 
@@ -68,6 +69,12 @@ Cada writeup sigue, en la medida de lo posible, la misma estructura:
 - curl / jq
 - Python (PoCs y scripts de explotación)
 - Node.js / WebSockets (cuando el objetivo lo requiere)
+- Impacket (MSSQL, secretsdump, ticketConverter)
+- BloodHound / BloodyAD / Certipy
+- Ligolo-ng (pivoting)
+- Evil-WinRM
+- John the Ripper / Hashcat
+- GodPotato / Rubeus
 - SSH
 
 ---

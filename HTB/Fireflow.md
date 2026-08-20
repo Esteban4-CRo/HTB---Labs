@@ -315,7 +315,7 @@ asyncio.run(ws_exec(COMMAND.split()))
 Ejecutamos el exploit, obtenemos acceso root en el contenedor privilegiado y capturamos la flag final.
 
 ![Pasted image 20260813223955](../Images/Pasted%20image%2020260813223955.png)
-![Fireflow](../Certficados/Fireflow.png)
+
 
 ---
 
@@ -397,3 +397,6 @@ WebSocket Execution contra Pod Privilegiado (node-exporter)
 > **Flag Root:** capturada ✅  
 > **Vector Inicial:** RCE CVE-2026-33017 (Langflow)  
 > **Escalada de Privilegios:** Bypass JWT (`alg: none`) + Kubelet API Exec (WebSockets)
+
+--- 
+![Fireflow](../Certficados/Fireflow.png)
