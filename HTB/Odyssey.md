@@ -1,10 +1,10 @@
-> [!info] Información de la máquina **Plataforma:** Hack The Box **Máquina:** Odyssey **OS:** Windows **Dificultad:** Easy **IP objetivo:** `10.129.76.62` **Dominio:** `odyssey.htb` **IP atacante:** `10.10.15.82`
+> [!info] Información de la máquina **Plataforma:** Hack The Box **Máquina:** Odyssey **OS:** Windows **Dificultad:** Insane **IP objetivo:** `10.129.76.62` **Dominio:** `odyssey.htb` **IP atacante:** `10.10.15.82`
 
 ---
 
 ## 1. Resumen
 
-**Odyssey** es una máquina Windows de dificultad Easy que involucra una cadena de ataque compleja a través de múltiples hosts en un entorno de Active Directory. El compromiso inicial se logra mediante una **inyección en el pipeline de agregación de NoSQL (MongoDB)** para extraer tokens de invitación no canjeados, seguido de un **registro sintético de WebAuthn** para autenticarse en la aplicación AEGIS. La escalada de privilegios abusa de un **Prototype Pollution** para leer archivos del servidor a través de plantillas LaTeX, una **ejecución remota de código (RCE) vía JSONPath (CVE-2025-1302)**, y técnicas avanzadas de Active Directory incluyendo **dMSA Ouroboros chain**, **HMAC-Gated YAML Deserialization** y **DCSync** para comprometer el controlador de dominio.
+**Odyssey** es una máquina Windows de dificultad Insane que involucra una cadena de ataque compleja a través de múltiples hosts en un entorno de Active Directory. El compromiso inicial se logra mediante una **inyección en el pipeline de agregación de NoSQL (MongoDB)** para extraer tokens de invitación no canjeados, seguido de un **registro sintético de WebAuthn** para autenticarse en la aplicación AEGIS. La escalada de privilegios abusa de un **Prototype Pollution** para leer archivos del servidor a través de plantillas LaTeX, una **ejecución remota de código (RCE) vía JSONPath (CVE-2025-1302)**, y técnicas avanzadas de Active Directory incluyendo **dMSA Ouroboros chain**, **HMAC-Gated YAML Deserialization** y **DCSync** para comprometer el controlador de dominio.
 
 ```mermaid
 flowchart TD

@@ -28,7 +28,7 @@ No es una carrera por el número. Es una carrera contra la excusa de "hoy no ten
 | 3 | [Appointment](HTB/Appoinment.md) | Linux | Very Easy | SQL Injection — bypass de autenticación | N/A (acceso directo a flag) | 11 Aug 2026 |
 | 4 | [Fireflow](HTB/Fireflow.md) | Linux | Medium Easy | CVE-2026-33017 (Langflow RCE) | JWT Bypass (`alg: none`) + Kubelet API Exec (WebSockets) | 13 Aug 2026 |
 | 5 | [Sequel](HTB/Sequel.md) | Linux | Very Easy | Acceso MariaDB sin contraseña (`root@3306`) | N/A (acceso directo a flag) | 15 Aug 2026 |
-| 6 | [Odyssey](HTB/Odyssey.md) | Windows | Easy | NoSQL Pipeline Injection + WebAuthn Synthetic Registration | CVE-2025-1302 → GodPotato → dMSA Ouroboros → YAML Deser → DCSync | 20 Aug 2026 |
+| 6 | [Odyssey](HTB/Odyssey.md) | Windows | Insane | NoSQL Pipeline Injection + WebAuthn Synthetic Registration | CVE-2025-1302 → GodPotato → dMSA Ouroboros → YAML Deser → DCSync | 20 Aug 2026 |
 
 Se irá actualizando esta tabla con cada máquina resuelta, en el orden en que caen.
 
