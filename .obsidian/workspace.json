@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB/Odyssey.md",
+                "file": "HTB/Cocodrile.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Odyssey"
+              "title": "Cocodrile"
             }
           }
         ]
@@ -190,22 +190,23 @@
   },
   "active": "29b5d599c9c7769d",
   "lastOpenFiles": [
+    "Images/Pasted image 20260823192815.png",
+    "Images/Pasted image 20260823192700.png",
+    "Images/Pasted image 20260823191904.png",
+    "Images/Pasted image 20260823191454.png",
+    "Images/Pasted image 20260823190922 1.png",
+    "Pasted image 20260823190922.png",
+    "Images/Pasted image 20260823190621.png",
+    "HTB/Odyssey.md",
+    "HTB/Cocodrile.md",
     "Images/Pasted image 20260820174951.png",
     "Images/Pasted image 20260820172204.png",
     "Images/Pasted image 20260820171336.png",
     "Images/Pasted image 20260820170800.png",
-    "Images/Pasted image 20260820163336.png",
-    "Images/Pasted image 20260820162635.png",
-    "Images/Pasted image 20260820154633.png",
-    "Images/Pasted image 20260820154324.png",
-    "Images/Pasted image 20260820153830.png",
-    "Images/Pasted image 20260819120602.png",
-    "Images/Pasted image 20260819115134.png",
     "HTB/Fireflow.md",
     "HTB/Reactor.md",
     "HTB/TwoMillion.md",
     "HTB/Sequel.md",
-    "HTB/Odyssey.md",
     "Images/Pasted.md",
     "Pasted.md",
     "HTB/Appoinment.md",
