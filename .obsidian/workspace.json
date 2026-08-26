@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB/Cocodrile.md",
+                "file": "HTB/DanglingTree.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cocodrile"
+              "title": "DanglingTree"
             }
           }
         ]
@@ -190,22 +190,23 @@
   },
   "active": "29b5d599c9c7769d",
   "lastOpenFiles": [
-    "Images/Pasted image 20260823192815.png",
-    "Images/Pasted image 20260823192700.png",
-    "Images/Pasted image 20260823191904.png",
-    "Images/Pasted image 20260823191454.png",
-    "Images/Pasted image 20260823190922 1.png",
-    "Pasted image 20260823190922.png",
-    "Images/Pasted image 20260823190621.png",
-    "HTB/Odyssey.md",
-    "HTB/Cocodrile.md",
-    "Images/Pasted image 20260820174951.png",
-    "Images/Pasted image 20260820172204.png",
-    "Images/Pasted image 20260820171336.png",
-    "Images/Pasted image 20260820170800.png",
+    "Images/Pasted image 20260826002558.png",
+    "Images/Pasted image 20260826001446.png",
+    "Images/Pasted image 20260826000800.png",
+    "Images/Pasted image 20260826000542.png",
+    "Images/Pasted image 20260825235255.png",
+    "Images/Pasted image 20260825235158.png",
+    "Images/Pasted image 20260825234312.png",
+    "Images/Pasted image 20260825234033.png",
+    "Images/Pasted image 20260825233111.png",
+    "Images/Pasted image 20260825232530.png",
+    "Images/Pasted image 20260825231311.png",
     "HTB/Fireflow.md",
-    "HTB/Reactor.md",
+    "HTB/DanglingTree.md",
     "HTB/TwoMillion.md",
+    "HTB/Cocodrile.md",
+    "HTB/Odyssey.md",
+    "HTB/Reactor.md",
     "HTB/Sequel.md",
     "Images/Pasted.md",
     "Pasted.md",
