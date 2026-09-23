@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB/DanglingTree.md",
+                "file": "HTB/Bedside.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DanglingTree"
+              "title": "Bedside"
             }
           }
         ]
@@ -83,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 400.5
+    "width": 400.5,
+    "collapsed": true
   },
   "right": {
     "id": "935371e6798e9746",
@@ -188,8 +189,22 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "29b5d599c9c7769d",
+  "active": "f9ef3e9190d4afe2",
   "lastOpenFiles": [
+    "Images/Pasted image 20260923002319.png",
+    "HTB/Sequel.md",
+    "HTB/Odyssey.md",
+    "HTB/DanglingTree.md",
+    "HTB/Appoinment.md",
+    "Sin título.canvas",
+    "Sin nombre",
+    "Sin título.base",
+    "HTB/Bedside.md",
+    "Images/Pasted image 20260909155542.png",
+    "Images/Pasted image 20260909155307.png",
+    "HTB/Reactor.md",
+    "README.md",
+    "Notas.md",
     "Images/Pasted image 20260826002558.png",
     "Images/Pasted image 20260826001446.png",
     "Images/Pasted image 20260826000800.png",
@@ -198,21 +213,12 @@
     "Images/Pasted image 20260825235158.png",
     "Images/Pasted image 20260825234312.png",
     "Images/Pasted image 20260825234033.png",
-    "Images/Pasted image 20260825233111.png",
-    "Images/Pasted image 20260825232530.png",
-    "Images/Pasted image 20260825231311.png",
     "HTB/Fireflow.md",
-    "HTB/DanglingTree.md",
     "HTB/TwoMillion.md",
     "HTB/Cocodrile.md",
-    "HTB/Odyssey.md",
-    "HTB/Reactor.md",
-    "HTB/Sequel.md",
     "Images/Pasted.md",
     "Pasted.md",
-    "HTB/Appoinment.md",
     "`Pasted.md",
-    "Sin título.md",
     "Certficados",
     "HTB",
     "README.md.md",

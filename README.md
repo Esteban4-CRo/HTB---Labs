@@ -12,10 +12,10 @@ No es una carrera por el número. Es una carrera contra la excusa de "hoy no ten
 
 | Métrica | Valor |
 |---------|-------|
-| Día actual | 8 |
-| Máquinas resueltas | 8 |
-| Racha actual | 8 días |
-| Última actualización | 26 Aug 2026 |
+| Día actual | 9 |
+| Máquinas resueltas | 9 |
+| Racha actual | 9 días |
+| Última actualización | 23 Sep 2026 |
 
 ---
 
@@ -31,6 +31,7 @@ No es una carrera por el número. Es una carrera contra la excusa de "hoy no ten
 | 6 | [Odyssey](HTB/Odyssey.md) | Windows | Insane | NoSQL Pipeline Injection + WebAuthn Synthetic Registration | CVE-2025-1302 → GodPotato → dMSA Ouroboros → YAML Deser → DCSync | 20 Aug 2026 |
 | 7 | [Crocodile](HTB/Cocodrile.md) | Linux | Very Easy | FTP Anonymous Login (`allowed.userlist` / `allowed.userlist.passwd`) | Credential Reuse en panel `login.php` | 23 Aug 2026 |
 | 8 | [DanglingTree](HTB/DanglingTree.md) | Windows | Medium | SMB anónimo → PDF con creds → WAC RCE (PowerShell injection) → SmarterMail Hub exploit | DPAPI credential theft → DCSync → Pass-the-Hash | 26 Aug 2026 |
+| 9 | [Bedside](HTB/Bedside.md) | Linux | Medium | CVE-2025-64512 (pdfminer.six RCE) + Path Traversal (Docker container escape) | PyTorch CheckpointLoader (`torch.load` RCE) | 23 Sep 2026 |
 
 Se irá actualizando esta tabla con cada máquina resuelta, en el orden en que caen.
 
