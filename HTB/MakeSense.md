@@ -1304,7 +1304,7 @@ export TERM=xterm
 stty rows 50 columns 200
 ```
 
-![[Pasted image 20260925165637.png]]
+![Shell root en MakeSense](../Images/Pasted%20image%2020260925165637.png)
 ---
 
 ## Resumen de la cadena completa
