@@ -35,6 +35,7 @@ No es una carrera por el número. Es una carrera contra la excusa de "hoy no ten
 | 10 | [MakeSense](HTB/MakeSense.md) | Linux | Medium | XSS almacenado en WordPress → RCE como `www-data` | ChromeDriver RCE como `admin` → servicio OCR interno como root | 25 Sep 2026 |
 | 11 | [Orion](HTB/Orion.md) | Linux | Easy | Craft CMS pre-auth RCE (CVE-2025-32432) | Telnetd authentication bypass (CVE-2026-24061) | 01 Oct 2026 |
 | 12 | [Layover](HTB/Layover.md) | Linux | Medium | Credenciales RDP → pivote WiFi → credenciales HTTP → Craft CMS RCE (CVE-2026-28695) | CUPS LPE (CVE-2026-34990) | 09 Oct 2026 |
+| 13 | [Stream](HTB/Stream.md) | Linux | Medium | Spring Boot Actuator `/actuator/heapdump` → credenciales ClickHouse (`svc_events`) → XXE in-band | ClickHouse `default` WRITE ON FILE → formateador `aidx_quarantine.py` como `root` vía `aidx-dlq-drainer.timer` | 27 Oct 2026 |
 
 Se irá actualizando esta tabla con cada máquina resuelta, en el orden en que caen.
 

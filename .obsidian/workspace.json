@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB/Bedside.md",
+                "file": "HTB/Layover.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Bedside"
+              "title": "Layover"
             }
           }
         ]
@@ -83,8 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 400.5,
-    "collapsed": true
+    "width": 400.5
   },
   "right": {
     "id": "935371e6798e9746",
@@ -100,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "# HTB — Reactor.md",
+                "file": "HTB/Orion.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "# HTB — Reactor.md",
+                "file": "HTB/Layover.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -171,51 +170,57 @@
               "title": "Esquema"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
       "switcher:Abrir selector rápido": false,
-      "graph:Abrir vista gráfica": false,
       "canvas:Crear nuevo lienzo": false,
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
-      "bases:Crear nueva base": false
+      "bases:Crear nueva base": false,
+      "graph:Abrir vista gráfica": false
     }
   },
   "active": "f9ef3e9190d4afe2",
   "lastOpenFiles": [
-    "Images/Pasted image 20260923002319.png",
-    "HTB/Sequel.md",
     "HTB/Odyssey.md",
+    "HTB/Reactor.md",
+    "HTB/TwoMillion.md",
+    "HTB/Layover.md",
+    "Pasted image 20261009190219.png",
+    "Pasted image 20261009184335.png",
+    "Images/Pasted image 20261009183857.png",
+    "Images/Pasted image 20261009114353.png",
     "HTB/DanglingTree.md",
+    "HTB/Sequel.md",
+    "HTB/MakeSense.md",
+    "HTB/Cocodrile.md",
+    "HTB/Orion.md",
+    "README.md",
     "HTB/Appoinment.md",
+    "Images/Pasted image 20261001185826.png",
+    "Images/Pasted image 20261001185058.png",
+    "Images/Pasted image 20261001190323.png",
+    "Pasted image 20261001185826.png",
+    "Pasted image 20261001185058.png",
+    "Images/Pasted image 20261001175832.png",
+    "HTB/Command.md",
+    "HTB/Sin confirmar 869026.crdownload",
+    "HTB/Fireflow.md",
+    "HTB/Bedside.md",
+    "HTB/comandos_hack_the_box_bedside.md",
+    "HTB/Sin confirmar 919423.crdownload",
     "Sin título.canvas",
     "Sin nombre",
     "Sin título.base",
-    "HTB/Bedside.md",
-    "Images/Pasted image 20260909155542.png",
-    "Images/Pasted image 20260909155307.png",
-    "HTB/Reactor.md",
-    "README.md",
     "Notas.md",
-    "Images/Pasted image 20260826002558.png",
-    "Images/Pasted image 20260826001446.png",
-    "Images/Pasted image 20260826000800.png",
-    "Images/Pasted image 20260826000542.png",
-    "Images/Pasted image 20260825235255.png",
-    "Images/Pasted image 20260825235158.png",
-    "Images/Pasted image 20260825234312.png",
-    "Images/Pasted image 20260825234033.png",
-    "HTB/Fireflow.md",
-    "HTB/TwoMillion.md",
-    "HTB/Cocodrile.md",
     "Images/Pasted.md",
     "Pasted.md",
     "`Pasted.md",
