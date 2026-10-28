@@ -36,6 +36,7 @@ No es una carrera por el número. Es una carrera contra la excusa de "hoy no ten
 | 11 | [Orion](HTB/Orion.md) | Linux | Easy | Craft CMS pre-auth RCE (CVE-2025-32432) | Telnetd authentication bypass (CVE-2026-24061) | 01 Oct 2026 |
 | 12 | [Layover](HTB/Layover.md) | Linux | Medium | Credenciales RDP → pivote WiFi → credenciales HTTP → Craft CMS RCE (CVE-2026-28695) | CUPS LPE (CVE-2026-34990) | 09 Oct 2026 |
 | 13 | [Stream](HTB/Stream.md) | Linux | Medium | Spring Boot Actuator `/actuator/heapdump` → credenciales ClickHouse (`svc_events`) → XXE in-band | ClickHouse `default` WRITE ON FILE → formateador `aidx_quarantine.py` como `root` vía `aidx-dlq-drainer.timer` | 27 Oct 2026 |
+| 14 | [DutyBound](HTB/DutyBound.md) | Linux | Medium | SQLi en campo `airline_use` de tarjeta de embarque (BCBP) → `COPY ... TO PROGRAM` → RCE como `postgres` | Pivote X11/XTEST a `dutyfree-kiosk` → CSV injection en `/opt/vrs/data/duty-rates.csv` → `root` | 28 Oct 2026 |
 
 Se irá actualizando esta tabla con cada máquina resuelta, en el orden en que caen.
 
