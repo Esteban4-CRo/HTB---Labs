@@ -1,0 +1,1 @@
+> [!info] Información de la máquina **Plataforma:** Hack The Box **Máquina:** Touch **OS:** Windows**Dificultad:** Easy **IP objetivo:** 10.129.9.216 **Dominio:** `sequel.htb` **IP atacante:** `10.10.14.86`
