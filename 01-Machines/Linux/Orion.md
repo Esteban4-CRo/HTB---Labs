@@ -59,7 +59,7 @@ logout                  [Status: 302, Size: 0, Words: 1, Lines: 1, Duration: 467
 
 ```
 
-![Versión de Craft CMS](../../Images/MakeSense/Pasted%20image%2020261001175832.png)
+![Versión de Craft CMS](../../Images/Orion/Pasted%20image%2020261001175832.png)
 
 # Which user is running CraftCMS?
 Craft CMS se ejecuta como **`www-data`**, como confirma la salida de `phpinfo()` más abajo. La versión **5.6.16** es vulnerable a **CVE-2025-32432**, una RCE **no autenticada** en el endpoint `assets/generate-transform`. Para comprobarlo, primero extraigo el `csrfTokenValue`.
@@ -191,7 +191,7 @@ Adaptamos la shell:
 python3 -c 'import pty; pty.spawn("/bin/bash")'
 ```
 
-![Acceso a la base de datos](../../Images/MakeSense/Pasted%20image%2020261001185058.png)
+![Acceso a la base de datos](../../Images/Orion/Pasted%20image%2020261001185058.png)
 
 ```bash 
 MariaDB [orion]> select username, email, password from users;
@@ -215,7 +215,7 @@ este es el hash bcrypt de `admin`, lo guardamos en un archivo y lo usamos en has
 ## Submit the flag located in the Adam user's home directory.
 
 Ahora que tenemos la contraseña `darkangel`, el siguiente paso es **probar si Adam la reutilizó para otros servicios** — específicamente SSH, que vimos abierto desde el escaneo inicial de Nmap.
-![Acceso como Adam](../../Images/MakeSense/Pasted%20image%2020261001185826.png)
+![Acceso como Adam](../../Images/Orion/Pasted%20image%2020261001185826.png)
 
 ## Which service, unrelated to CraftCMS, is open only locally on Orion?
 El servicio es **Telnet**, escuchando solo en `127.0.0.1:23`.
@@ -255,4 +255,4 @@ Esta versión específica (GNU inetutils telnetd 2.7) es la que contiene la vuln
 
 El flag `-f` en `login` significa _"fast login" / "skip password authentication"_ — se usa normalmente para que un proceso ya autenticado (como el propio `telnetd`, que confía en quien se conecta desde dentro de la red local) no tenga que volver a pedir contraseña. El problema es que `telnetd` no sanitiza ese valor antes de pasarlo, así que podemos controlar nosotros qué usuario "ya autenticado" decimos ser — en este caso, `root`.
 
-![Acceso root mediante Telnet](../../Images/MakeSense/Pasted%20image%2020261001190323.png)
+![Acceso root mediante Telnet](../../Images/Orion/Pasted%20image%2020261001190323.png)
