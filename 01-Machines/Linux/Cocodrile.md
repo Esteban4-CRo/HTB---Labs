@@ -39,7 +39,7 @@ sudo nmap -sC -sV 10.129.175.149
 | `-sC` | Ejecuta los scripts predeterminados de NSE (Nmap Scripting Engine) |
 | `-sV` | Determina la versión del servicio que se ejecuta en los puertos abiertos |
 
-![Pasted image 20260823190621]('../../Images/Cocodrile/Pasted%20image%2020260823190621.png')
+![Pasted image 20260823190621](../../Images/Cocodrile/Pasted%20image%2020260823190621.png)
 
 **Servicios identificados:**
 - **Puerto 21/tcp:** FTP (`vsftpd 3.0.3`) - *Anonymous FTP login allowed (Code 230)*
@@ -60,7 +60,7 @@ ftp 10.129.175.149
 * **Usuario:** `anonymous`
 * **Contraseña:** (presionar Enter o dejar en blanco)
 
-![Pasted image 20260823190922 1]('../../Images/Cocodrile/Pasted%20image%2020260823190922%201.png')
+![Pasted image 20260823190922 1](../../Images/Cocodrile/Pasted%20image%2020260823190922%201.png)
 
 ### 3.2 Descarga de Archivos Sensibles
 
@@ -72,13 +72,13 @@ ftp> get allowed.userlist
 ftp> get allowed.userlist.passwd
 ```
 
-![Pasted image 20260823191454]('../../Images/Cocodrile/Pasted%20image%2020260823191454.png')
+![Pasted image 20260823191454](../../Images/Cocodrile/Pasted%20image%2020260823191454.png)
 
 Inspeccionando los archivos descargados:
 - `allowed.userlist`: Contiene nombres de usuarios del sistema, destacando el usuario con mayores privilegios **`admin`**.
 - `allowed.userlist.passwd`: Contiene las contraseñas asociadas.
 
-![Pasted image 20260823191904]('../../Images/Cocodrile/Pasted%20image%2020260823191904.png')
+![Pasted image 20260823191904](../../Images/Cocodrile/Pasted%20image%2020260823191904.png)
 
 ---
 
@@ -99,7 +99,7 @@ gobuster dir -u http://10.129.175.149/ -w /usr/share/wordlists/dirb/common.txt -
 | `-w` | Wordlist para el ataque de fuerza bruta |
 | `-x php` | Busca archivos con la extensión especificada (`.php`) |
 
-![Pasted image 20260823192700]('../../Images/Cocodrile/Pasted%20image%2020260823192700.png')
+![Pasted image 20260823192700](../../Images/Cocodrile/Pasted%20image%2020260823192700.png)
 
 Gobuster reporta el hallazgo del archivo **`login.php`**.
 
@@ -109,7 +109,7 @@ Gobuster reporta el hallazgo del archivo **`login.php`**.
 
 Navegamos hacia `http://10.129.175.149/login.php` e ingresamos las credenciales obtenidas del servidor FTP para el usuario `admin`.
 
-![Pasted image 20260823192815]('../../Images/Cocodrile/Pasted%20image%2020260823192815.png')
+![Pasted image 20260823192815](../../Images/Cocodrile/Pasted%20image%2020260823192815.png)
 
 > [!success] Autenticación Exitosa & Flag Capturada
 > Al iniciar sesión en `login.php` con el usuario `admin` y su respectiva contraseña, accedemos al panel de administración y obtenemos la **flag** del sistema. ✅

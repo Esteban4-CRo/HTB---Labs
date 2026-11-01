@@ -595,4 +595,4 @@ python3 poc.py "http://10.129.245.214:3000/" "node /tmp/exploit.js 2>&1 | paste 
 
 --- 
 
-![Reactor](\.\./\.\./Certficados/Reactor.png)
+![Reactor](../../Certficados/Reactor.png)
