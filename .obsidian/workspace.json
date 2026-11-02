@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-Machines/Linux/TwoMillion.md",
+                "file": "01-Machines/Windows/Touch.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TwoMillion"
+              "title": "Touch"
             }
           }
         ]
@@ -200,14 +200,9 @@
                     {
                       "tabId": "tab-1791862639243-jj6cce4",
                       "conversationId": "conv-1791862644033-ncxj1d5pj"
-                    },
-                    {
-                      "tabId": "tab-1793558287488-clys107",
-                      "conversationId": "conv-1791862644033-ncxj1d5pj",
-                      "preview": true
                     }
                   ],
-                  "activeTabId": "tab-1793558287488-clys107"
+                  "activeTabId": "tab-1791862639243-jj6cce4"
                 }
               },
               "icon": "bot",
@@ -236,7 +231,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 757.5
+    "width": 360.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -253,52 +248,52 @@
   },
   "active": "559054cd509ff60f",
   "lastOpenFiles": [
-    "fix_images_final2.ps1",
-    "fix_images_final.ps1",
-    "02-Techniques/Spring-Boot-Actuator-Heapdump.md",
-    "fix_image_refs.ps1",
-    "02-Techniques/XXE-Inband.md",
-    "02-Techniques/XXE-via-AIDX-Ingest.md",
-    "04-CVE-Database/CVE-2023-0386.md",
-    "04-CVE-Database/CVE-2025-32432.md",
-    "04-CVE-Database/CVE-2025-55182.md",
-    "04-CVE-Database/CVE-2026-28695.md",
-    "04-CVE-Database/CVE-2026-34990.md",
-    "01-Machines/Linux/TwoMillion.md",
-    "05-Cheatsheets/xxe-cheatsheet.md",
-    "05-Cheatsheets/spring-boot-actuator-cheatsheet.md",
-    "05-Cheatsheets/kafka-cheatsheet.md",
-    "05-Cheatsheets/clickhouse-cheatsheet.md",
-    "05-Cheatsheets/nmap-cheatsheet.md",
-    "04-CVE-Database/CVE-2026-24061.md",
-    "04-CVE-Database/CVE-2026-33017.md",
-    "04-CVE-Database/CVE-2025-64512.md",
-    "03-Tools/tools-list.md",
-    "01-Machines/Linux/Stream.md",
+    "fix_images_final3.ps1",
+    "fix_final_images.ps1",
     "01-Machines/Windows/Touch.md",
-    "fix_images2.ps1",
-    "01-Machines/Linux/MakeSense.md",
-    "fix_images.ps1",
-    "01-Machines/Linux/Fireflow.md",
-    "Certficados/Appoinment.png",
-    "Certficados/Sequel.png",
-    "01-Machines/Linux/Reactor.md",
-    "00-Templates/Machine-Template.md",
-    "Images/_shared/terminal.png",
-    "Images/_unused/Pasted_image_20260808224434.png",
-    "Images/_unused/Pasted_image_20260808215928.png",
-    "Images/_unused/Pasted_image_20260808215340.png",
-    "Images/_unused/Pasted.md",
-    "Images/_unused/Pasted image 20261017165602.png",
-    "Images/_unused/Pasted image 20261009190219.png",
-    "Images/_unused/Pasted image 20261009184335.png",
-    "Images/_unused/Pasted image 20261009183857.png",
-    "Images/Appoinment",
-    "Images/DutyBound",
-    "Images/MakeSense",
-    "Images/Odyssey",
-    "Images/Bedside",
-    "Images/Orion",
+    "Images/touch/scanner_panel.png",
+    "Images/touch/Pasted image 20261101165440.png",
+    "Images/touch/Pasted image 20261101160344.png",
+    "Images/touch/mysql_udf_privesc_root.png",
+    "Images/touch/kiosk_booking_search.png",
+    "Images/touch/file_explorer_c_drive.png",
+    "Images/touch/docreader_error_dialog.png",
+    "Images/touch/cmd_shell_user_flag.png",
+    "Images/touch/browser_escape_edge.png",
+    "Images/touch/api_status_leak.png",
+    "Images/touch",
+    "website/node_modules/sucrase/node_modules/commander/typings/index.d.ts",
+    "website/node_modules/sucrase/node_modules/commander/typings",
+    "website/node_modules/linebreak/node_modules/base64-js/bench/bench.js",
+    "website/node_modules/linebreak/node_modules/base64-js/bench",
+    "website/node_modules/gray-matter/node_modules/js-yaml/bin/js-yaml.js",
+    "website/node_modules/gray-matter/node_modules/js-yaml/bin",
+    "website/node_modules/@types/node/ts5.7/compatibility/float16array.d.ts",
+    "website/node_modules/@types/node/ts5.7/index.d.ts",
+    "website/node_modules/typed-array-buffer/README.md",
+    "website/node_modules/typed-array-buffer/CHANGELOG.md",
+    "website/node_modules/supports-preserve-symlinks-flag/README.md",
+    "website/node_modules/supports-preserve-symlinks-flag/CHANGELOG.md",
+    "website/node_modules/rehype-katex/readme.md",
+    "website/node_modules/regex-utilities/README.md",
+    "website/node_modules/joycon/README.md",
+    "website/node_modules/is-callable/README.md",
+    "website/node_modules/is-callable/CHANGELOG.md",
+    "website/node_modules/is-core-module/CHANGELOG.md",
+    "website/node_modules/is-core-module/README.md",
+    "website/node_modules/dequal/readme.md",
+    "website/node_modules/camelize/README.md",
+    "website/node_modules/camelize/CHANGELOG.md",
+    "website/node_modules/micromorph/README.md",
+    "website/node_modules/@quartz-community/utils/README.md",
+    "website/node_modules/@quartz-community/utils/CHANGELOG.md",
+    "website/node_modules/@quartz-community/types/README.md",
+    "website/node_modules/rxjs/CHANGELOG.md",
+    "website/node_modules/sass-embedded-win32-x64/README.md",
+    "website/node_modules/css-to-react-native/LICENSE.md",
+    "website/node_modules/@parcel/watcher/README.md",
+    "website/node_modules/yargs/README.md",
+    "website/node_modules/@citation-js/core/README.md",
     "Sin título.canvas"
   ]
 }

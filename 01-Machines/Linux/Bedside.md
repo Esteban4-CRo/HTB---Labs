@@ -69,7 +69,7 @@ PORT     STATE    SERVICE
 
 ## 3. Enumeración Web
 
-![Pasted image 20260909155307](../../Images/Bedside/Pasted%20image%2020260909155307.png)
+![Pasted image 20260909155307](../../Images/MakeSense/Pasted%20image%2020260909155307.png)
 
 Según el escaneo anterior el puerto 80 está abierto, lo que quiere decir que hay servicio web alojado. Al parecer no hay ningún campo de inyección en la página principal, pero al hacer fuzzing para buscar subdominios con `ffuf` se encontró `research`. 
 
@@ -113,7 +113,7 @@ echo "10.129.96.31 research.bedside.htb" | sudo tee -a /etc/hosts
 
 ## 4. Identificar la vulnerabilidad (CVE-2025-64512)
 
-![Pasted image 20260909155542](../../Images/Bedside/Pasted%20image%2020260909155542.png)
+![Pasted image 20260909155542](../../Images/MakeSense/Pasted%20image%2020260909155542.png)
 
 El portal usa `pdfminer.six`, una librería vulnerable a **CVE-2025-64512** (deserialización insegura con `pickle`). La explotación consiste en subir un archivo gzip que contiene un payload en pickle y luego invocar el procesamiento con un PDF que apunta al payload subido:
 
@@ -212,7 +212,7 @@ El puerto `3000` servía la aplicación **"Bedside Clinic - Image Viewer"**. Al 
 curl -s http://172.17.0.1:3000/ -o /tmp/v.html sed -n '85,95p' /tmp/v.html
 ```
 
-![Pasted image 20260923002319](../../Images/Bedside/Pasted%20image%2020260923002319.png)
+![Pasted image 20260923002319](../../Images/MakeSense/Pasted%20image%2020260923002319.png)
 
 La prueba contra el endpoint `/api/slice` confirmó el estado `404 Not Found`:
 
