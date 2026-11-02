@@ -1,4 +1,4 @@
-
+﻿
 > [!info] Información de la máquina
 > **Plataforma:** Hack The Box
 > **Máquina:** Touch
@@ -80,7 +80,7 @@ El 403 en `/api` confirmó que el prefijo existe pero no es navegable directo �
 
 ### 2.3 Fuga de metadatos sin autenticación
 
-![[Images/Touch/api_status_leak.png]]
+![api_status_leak.png](../../Images/touch/api_status_leak.png)]
 
 ```json
 {
@@ -105,7 +105,7 @@ El serial filtrado funcionó como contraseña del panel de administración de Ne
 
 ### 3.2 Panel Scanner
 
-![[Images/Touch/scanner_panel.png]]
+![scanner_panel.png](../../Images/touch/scanner_panel.png)]
 
 El panel del scanner (Nexion DocReader SR-4200, serial `NX-SR-2024-0042`) mostraba credenciales enmascaradas con un link "show" — enmascarado puramente visual, sin petición adicional al servidor.
 
@@ -126,7 +126,7 @@ xfreerdp /u:KioskUser /p:'K!0sk2026#' /v:touch.htb /cert:ignore
 
 La sesión me dejó dentro de un kiosko de autoservicio de HTB Airways en pantalla completa, sin escritorio ni taskbar.
 
-![[Images/Touch/kiosk_booking_search.png]]
+![kiosk_booking_search.png](../../Images/touch/kiosk_booking_search.png)]
 
 ---
 
@@ -145,7 +145,7 @@ La búsqueda cargó y avancé a **Verificación de Documento**.
 
 Al intentar escanear, apareció un diálogo de error de **Nexion DocReader SR-4200**:
 
-![[Images/Touch/docreader_error_dialog.png]]
+![docreader_error_dialog.png](../../Images/touch/docreader_error_dialog.png)]
 
 ```
 Error Code: SCN-ERR-4092
@@ -160,11 +160,11 @@ https://support.nexionsystems.com/docreader/troubleshoot
 
 Al hacer clic se abrió un Edge completo, con barra de direcciones editable:
 
-![[Images/Touch/browser_escape_edge.png]]
+![browser_escape_edge.png](../../Images/touch/browser_escape_edge.png)]
 
 Navegué a `file:///C:/` para listar el sistema de archivos local:
 
-![[Images/Touch/file_explorer_c_drive.png]]
+![file_explorer_c_drive.png](../../Images/touch/file_explorer_c_drive.png)]
 
 Noté `MySQL/` en la raíz de `C:\` (instalación standalone de base de datos) y `ProgramData/` como candidatos para la fase de post-explotación.
 
@@ -178,7 +178,7 @@ C:\Windows\System32\cmd.exe
 
 Windows lo ejecutó directamente, dándome consola como `KioskUser`.
 
-![[Images/Touch/cmd_shell_user_flag.png]]
+![cmd_shell_user_flag.png](../../Images/touch/cmd_shell_user_flag.png)]
 
 ```
 C:\Users\KioskUser\Desktop>type user.txt
@@ -378,7 +378,7 @@ Con la ruta correcta ya confirmada, el registro se completó sin errores.
 mysql.exe -u root -p"HTB@irw4ys_DB!2026" -e "SELECT CONVERT(sys_eval('type C:\\Users\\Administrator\\Desktop\\root.txt') USING utf8);"
 ```
 
-![[Images/Touch/mysql_udf_privesc_root.png]]
+![mysql_udf_privesc_root.png](../../Images/touch/mysql_udf_privesc_root.png)]
 
 **Root flag:** obtenida ✅ (no se documenta el valor completo por política del proyecto).
 

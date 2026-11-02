@@ -246,8 +246,10 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "559054cd509ff60f",
+  "active": "ba6ed0f896cebb0d",
   "lastOpenFiles": [
+    "fix_touch_wikilinks.ps1",
+    "fix_touch_images.ps1",
     "fix_images_final3.ps1",
     "fix_final_images.ps1",
     "01-Machines/Windows/Touch.md",
@@ -268,8 +270,6 @@
     "website/node_modules/linebreak/node_modules/base64-js/bench",
     "website/node_modules/gray-matter/node_modules/js-yaml/bin/js-yaml.js",
     "website/node_modules/gray-matter/node_modules/js-yaml/bin",
-    "website/node_modules/@types/node/ts5.7/compatibility/float16array.d.ts",
-    "website/node_modules/@types/node/ts5.7/index.d.ts",
     "website/node_modules/typed-array-buffer/README.md",
     "website/node_modules/typed-array-buffer/CHANGELOG.md",
     "website/node_modules/supports-preserve-symlinks-flag/README.md",
