@@ -8,6 +8,7 @@
 | Feroxbuster | Fuzzing de directorios web | Stream |
 | WPScan | Escaneo de WordPress | MakeSense |
 | ffuf | Fuzzing de vhosts y directorios | Stream |
+| WhatWeb | Identificación de tecnologías web | Responder |
 
 ## Análisis Web y APIs
 | Herramienta | Uso | Máquina |
@@ -23,6 +24,12 @@
 | Python3 | Scripts de explotación (XXE, XXE in-band) | Stream, DutyBound |
 | Netcat | Reverse shells | Todas |
 | Socat | Redirección de puertos | - |
+| Evil-WinRM | Acceso remoto a Windows mediante WinRM | Responder |
+
+## Captura de credenciales
+| Herramienta | Uso | Máquina |
+|-------------|-----|---------|
+| Responder | Captura de desafíos NetNTLMv2 | Responder |
 
 ## Escalada de Privilegios
 | Herramienta | Uso | Máquina |
@@ -36,7 +43,7 @@
 ## Post-Explotación
 | Herramienta | Uso | Máquina |
 |-------------|-----|---------|
-| John the Ripper | Crackeo de contraseñas | - |
+| John the Ripper | Crackeo de hashes NetNTLMv2 | Responder |
 | Hashcat | Crackeo de contraseñas | - |
 | Mimikatz | Extracción de credenciales Windows | - |
 | Impacket | Herramientas de red y autenticación | - |

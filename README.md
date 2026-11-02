@@ -13,8 +13,8 @@ El objetivo no es acumular máquinas, sino mantener la constancia y aprender alg
 | Métrica | Valor |
 |---------|-------|
 | Objetivo | Resolver máquinas durante 365 días consecutivos |
-| Máquinas documentadas | 15 |
-| Última máquina registrada | Touch — 28 Oct 2026 |
+| Máquinas documentadas | 16 |
+| Última máquina registrada | Responder — 01 Nov 2026 |
 
 ---
 
@@ -37,6 +37,7 @@ El objetivo no es acumular máquinas, sino mantener la constancia y aprender alg
 | 13 | [Stream](01-Machines/Linux/Stream.md) | Linux | Medium | Spring Boot Actuator `/actuator/heapdump` → credenciales ClickHouse (`svc_events`) → XXE in-band | ClickHouse `default` WRITE ON FILE → formateador `aidx_quarantine.py` como `root` vía `aidx-dlq-drainer.timer` | 27 Oct 2026 |
 | 14 | [DutyBound](01-Machines/Linux/DutyBound.md) | Linux | Medium | SQLi en campo `airline_use` de tarjeta de embarque (BCBP) → `COPY ... TO PROGRAM` → RCE como `postgres` | Pivote X11/XTEST a `dutyfree-kiosk` → CSV injection en `/opt/vrs/data/duty-rates.csv` → `root` | 28 Oct 2026 |
 | 15 | [Touch](01-Machines/Windows/Touch.md) | Windows | Easy | SSH como `svc-infra` → XXE in-band → ClickHouse `default` WRITE ON FILE → formateador `aidx_quarantine.py` como `root` vía `aidx-dlq-drainer.timer` | 28 Oct 2026 |
+| 16 | [Responder](01-Machines/Windows/Responder.md) | Windows | Very Easy | LFI → captura y crackeo de NetNTLMv2 → acceso por WinRM | N/A (acceso directo a flag) | 01 Nov 2026 |
 
 Se irá actualizando esta tabla con cada máquina resuelta, en el orden en que caen.
 
@@ -58,6 +59,7 @@ Se irá actualizando esta tabla con cada máquina resuelta, en el orden en que c
 ├── 05-Cheatsheets/       # Cheatsheets de referencia
 ├── Certficados/          # Capturas de constancia completada máquina
 ├── Images/               # Capturas de pantalla organizadas por máquina
+│   ├── Responder/        # Capturas de Responder
 │   ├── _shared/          # Imágenes compartidas entre máquinas
 │   └── _unused/          # Imágenes sin referencia en ningún writeup
 ├── README.md             # Este archivo
@@ -84,10 +86,15 @@ Cada writeup sigue, en la medida de lo posible, la misma estructura:
 
 ## Herramientas frecuentes
 
+- [Inventario de herramientas](03-Tools/tools-list.md)
 - Nmap
+- WhatWeb
 - Burp Suite
 - curl / jq
 - Python (PoCs y scripts de explotación)
+- Responder
+- John the Ripper
+- Evil-WinRM
 - Node.js / WebSockets (cuando el objetivo lo requiere)
 - Impacket (MSSQL, secretsdump, ticketConverter)
 - BloodHound / BloodyAD / Certipy
