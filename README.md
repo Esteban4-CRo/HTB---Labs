@@ -1,10 +1,10 @@
 # 365 Days of Hack The Box
 
-> Poder de la capa, madafakin uan jandred an eigdi nain.
+> Un día a la vez. Un laboratorio a la vez.
 
-Reto personal: resolver máquinas de [Hack The Box](https://www.hackthebox.com/) durante 365 días seguidos, documentando cada writeup, técnica y error en el camino. Este repositorio es mi cuaderno de bitácora público: enumeración, explotación y escalada de privilegios, máquina por máquina.
+Reto personal: resolver máquinas de [Hack The Box](https://www.hackthebox.com/) durante 365 días seguidos y documentar el proceso, los aprendizajes y los errores. Este repositorio reúne writeups y notas de laboratorio organizados por máquina y por tema.
 
-No es una carrera por el número. Es una carrera contra la excusa de "hoy no tengo tiempo".
+El objetivo no es acumular máquinas, sino mantener la constancia y aprender algo nuevo en cada laboratorio.
 
 ---
 
@@ -12,10 +12,9 @@ No es una carrera por el número. Es una carrera contra la excusa de "hoy no ten
 
 | Métrica | Valor |
 |---------|-------|
-| Día actual | 15 |
-| Máquinas resueltas | 15 |
-| Racha actual | 15 días |
-| Última actualización | 28 Oct 2026 |
+| Objetivo | Resolver máquinas durante 365 días consecutivos |
+| Máquinas documentadas | 15 |
+| Última máquina registrada | Touch — 28 Oct 2026 |
 
 ---
 
@@ -65,7 +64,7 @@ Se irá actualizando esta tabla con cada máquina resuelta, en el orden en que c
 └── .obsidian/            # Configuración de Obsidian
 ```
 
-Los writeups están escritos originalmente como notas de Obsidian (por eso usan callouts tipo `[!info]`, `[!success]`, etc. y diagramas Mermaid), así que se recomienda leerlos con un visor que soporte ambos, aunque también son perfectamente legibles como Markdown plano en GitHub.
+Los writeups están escritos como notas de Obsidian y pueden incluir callouts (`[!info]`, `[!success]`) y diagramas Mermaid. Se recomienda abrir este repositorio como vault en Obsidian para conservar ese formato; las imágenes usan rutas relativas dentro del vault. También se pueden consultar como Markdown en GitHub.
 
 ---
 
