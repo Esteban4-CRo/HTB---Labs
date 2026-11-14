@@ -13,8 +13,8 @@ El objetivo no es acumular máquinas, sino mantener la constancia y aprender alg
 | Métrica | Valor |
 |---------|-------|
 | Objetivo | Resolver máquinas durante 365 días consecutivos |
-| Máquinas documentadas | 16 |
-| Última máquina registrada | Responder — 01 Nov 2026 |
+| Máquinas documentadas | 17 |
+| Última máquina registrada | Cohort — 14 Nov 2026 |
 
 ---
 
@@ -38,6 +38,7 @@ El objetivo no es acumular máquinas, sino mantener la constancia y aprender alg
 | 14 | [DutyBound](01-Machines/Linux/DutyBound.md) | Linux | Medium | SQLi en campo `airline_use` de tarjeta de embarque (BCBP) → `COPY ... TO PROGRAM` → RCE como `postgres` | Pivote X11/XTEST a `dutyfree-kiosk` → CSV injection en `/opt/vrs/data/duty-rates.csv` → `root` | 28 Oct 2026 |
 | 15 | [Touch](01-Machines/Windows/Touch.md) | Windows | Easy | SSH como `svc-infra` → XXE in-band → ClickHouse `default` WRITE ON FILE → formateador `aidx_quarantine.py` como `root` vía `aidx-dlq-drainer.timer` | 28 Oct 2026 |
 | 16 | [Responder](01-Machines/Windows/Responder.md) | Windows | Very Easy | LFI → captura y crackeo de NetNTLMv2 → acceso por WinRM | N/A (acceso directo a flag) | 01 Nov 2026 |
+| 17 | [Cohort](01-Machines/Linux/Cohort.md) | Linux | Easy | SSRF en `/api/validate` → host interno Marimo → CVE-2026-39987 | PackageKit TOCTOU (CVE-2026-41651) | 14 Nov 2026 |
 
 Se irá actualizando esta tabla con cada máquina resuelta, en el orden en que caen.
 
@@ -59,6 +60,7 @@ Se irá actualizando esta tabla con cada máquina resuelta, en el orden en que c
 ├── 05-Cheatsheets/       # Cheatsheets de referencia
 ├── Certficados/          # Capturas de constancia completada máquina
 ├── Images/               # Capturas de pantalla organizadas por máquina
+│   ├── cohort/           # Capturas del writeup de Cohort
 │   ├── Responder/        # Capturas de Responder
 │   ├── _shared/          # Imágenes compartidas entre máquinas
 │   └── _unused/          # Imágenes sin referencia en ningún writeup
